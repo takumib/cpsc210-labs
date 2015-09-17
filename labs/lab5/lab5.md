@@ -5,7 +5,7 @@ When you're done with this lab, you should understand and be able to employ
 "void" pointers in your code, gain some familiarity with developing type-general 
 data-structures, and work more effectively with pointers in general.
 
-You download your complete starter kit [here]() or simply peruse the default [lab sources]() on 
+You download your complete starter kit [here]() or simply peruse the default [lab sources](https://github.com/Welchd1/cpsc210-labs/tree/master/labs/lab5/src) on 
 github directly.
 
 ## Background: void pointers and type casting
