@@ -131,5 +131,4 @@ our illustration:
 
 ![list manager](https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab5/node_diag2.png)
 
-
 Whereas a list typically has many node_t s, 
