@@ -1,7 +1,7 @@
-## Some objectives for today's lab
+## Objectives
 
 In this lab you will be writing a bare-bones implementation of a singly linked list. 
-When you're done with this lab, you should be able to understand and be able to employ 
+When you're done with this lab, you should understand and be able to employ 
 "void" pointers in your code, gain some familiarity with developing type-general 
 data-structures, and work more effectively with pointers in general.
 
@@ -126,8 +126,10 @@ within the list -- which one? -- we'll get to that when we look at the functions
 * a `head` pointer which always points to the `node_t` at the start of the list (e.g.: the **head** of the list);
 if the list is empty, `head` points to `null`.
 
-So in terms of our previous `[5, 2, 7]` a `list_t` adds the following to our 
-illustration:
+So in terms of our previous `[5, 2, 7]` example list, a `list_t` adds the following to 
+our illustration:
+
+![list manager](https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab5/node_diag2.png)
 
 
 Whereas a list typically has many node_t s, 
