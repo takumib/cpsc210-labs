@@ -1,4 +1,4 @@
-# CPSC210 -- Programming Methodology Labs
+# CPSC210 -- Programming Methodology
 
 This is the home page for all **lab sections** of Computer Science 210, Programming 
 Methodology, at Clemson University
