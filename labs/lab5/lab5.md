@@ -5,7 +5,8 @@ When you're done with this lab, you should understand and be able to employ
 "void" pointers in your code, gain some familiarity with developing type-general 
 data-structures, and work more effectively with pointers in general.
 
-You can find your starter kit [here]().
+You download your complete starter kit [here]() or simply peruse the default [lab sources]() on 
+github directly.
 
 ## Background: void pointers and type casting
 
