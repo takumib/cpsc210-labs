@@ -1,4 +1,7 @@
-/** listtest.c  CPSC 2101 lab 5 **/
+/** listtest.c -- cpsc 210 lab 5 
+ *  name:
+ *  lab-section:
+ */
 #include "list.h"
 
 typedef struct vehicle_type {

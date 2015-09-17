@@ -1,4 +1,7 @@
-/** list.h -- cpsc 2101 lab 5 */
+/** list.h -- cpsc 210 lab 5 
+ *  name:
+ *  lab-section:
+ */
 #ifndef LIST_H
 #define LIST_H
 
@@ -19,7 +22,7 @@ typedef struct list {
 } list_t;
 
 /** some function prototypes */
-list_t *init();						// create and initialize list object
+list_t *init();								// create and initialize list object
 void prepend(list_t *list, void *data); 	// add data to the end of the list
 void reset(list_t *list);              		// reset position pointer
 void *next(list_t *list);           		// get the next node from the list
