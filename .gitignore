@@ -1,0 +1,5 @@
+*.o
+*.class
+*.gch
+.DS_Store
+.DS_Store?
