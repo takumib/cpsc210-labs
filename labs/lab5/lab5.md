@@ -85,23 +85,49 @@ was discussed in two key respects, **so pay attention**:
 * new additions to a list, rather than being appended to the **tail** (end), should 
 instead be added to the **head** (front) of the list. 
 
-In [list.h]() we provide two structures for you to work with 
--- which, when taken together -- form the foundation of all we need to arrive at our 
-final list. The first of these structures is:
+### Key structures
+In [list.h]() we provide two structures that give us everything we need to implement the 
+list data structure we want. 
+
+#### `node_t`
+The first of these is `node_t`:
 ```c
-typedef struct node
-{
+typedef struct node {
    struct node *next;	// pointer to the next node
-   void *data;		// the data stored at this node
+   void *data;			// the data pointed-to-by/stored at this node
 } node_t;
 ```
-Think of a `node_t` as one link in a 'chain' of *n* nodes that form our list. The struct
-defines two fields: 
-* a `next` pointer that points to the next `node_t` in the 'chain' if there is such 
-a node; `null` otherwise.
-* a void pointer that points to a arbitrarily typed piece of data 
-(could be number, string, etc)
+Think of a `node_t` as one link in a chain of *n* nodes that form the backbone of
+our list. This particular struct consists of two fields: 
+* a `next` pointer that points to the next `node_t` in the 'chain' if there is indeed 
+such a node; `null` otherwise.
+* a void pointer called `data` that points to an arbitrarily-typed object
+(could be a number, string, vector, tree, etc)
 
-By way of illustration, consider the a list of `int`s such as `[5, 2, 7]`. Given our
-definition of `node_t`, this list internally would look something like:
+Given our definition of `node_t`, pictorially, a list of integers such as `[5, 2, 7]` 
+would internally look something like:
 
+![nodes](https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab5/node_diag1.png)
+
+#### `list_t`
+
+The second, and final piece of our implementation puzzle is `list_t`:
+```c
+typedef struct list {
+   node_t *current;		// current list position 
+   node_t *head;		// the head (starting node) of our list
+} node_t;
+```
+
+You can think of `list_t` as the manager, or controller, of an entire list. The `list_t`
+controller keeps track of two important pieces of information:
+* a `current` position pointer that points to *one* particular `node_t`
+within the list -- which one? -- we'll get to that when we look at the functions.
+* a `head` pointer which always points to the `node_t` at the start of the list (e.g.: the **head** of the list);
+if the list is empty, `head` points to `null`.
+
+So in terms of our previous `[5, 2, 7]` a `list_t` adds the following to our 
+illustration:
+
+
+Whereas a list typically has many node_t s, 
