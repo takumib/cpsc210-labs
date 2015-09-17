@@ -86,8 +86,8 @@ was discussed in two key respects, **so pay attention**:
 instead be added to the **head** (front) of the list. 
 
 ### Key structures
-In [list.h]() we provide two structures that give us everything we need to implement the 
-list data structure we want. 
+In [list.h]() we provide two structures that give us everything we need to implement the desired
+list data structure. 
 
 #### `node_t`
 The first of these is `node_t`:
@@ -100,7 +100,7 @@ typedef struct node {
 Think of a `node_t` as one link in a chain of *n* nodes that form the backbone of
 our list. This particular struct consists of two fields: 
 * a `next` pointer that points to the next `node_t` in the 'chain' if there is indeed 
-such a node; `null` otherwise.
+such a node; `null` otherwise
 * a void pointer called `data` that points to an arbitrarily-typed object
 (could be a number, string, vector, tree, etc)
 
@@ -126,9 +126,65 @@ within the list -- which one? -- we'll get to that when we look at the functions
 * a `head` pointer which always points to the `node_t` at the start of the list (e.g.: the **head** of the list);
 if the list is empty, `head` points to `null`.
 
-So in terms of our previous `[5, 2, 7]` example list, a `list_t` adds the following to 
+So in terms of our previous `[5, 2, 7]` example, `list_t` adds the following to 
 our illustration:
 
 ![list manager](https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab5/node_diag2.png)
 
-Whereas a list typically has many node_t s, 
+### List functions
+
+Here are prototypes for the list functions that you are expected to implement. Each is 
+preceded by an *informal* specification that not only points you to helpful external 
+resources, but also describes what the function is supposed to do.
+
+```c
+/** Creates and returns a 'new' list controller object. To implement this correctly,
+ *  you're going to need to understand how to allocate memory in C using the malloc 
+ *  ('M'emory'ALLOC'cation) function, which you can read more about here: 
+ */
+list_t *init();
+
+/** Given an existing (possibly empty) 'list' and a pointer to a piece of 'data', 
+ *  this method creates a new node whose data field points to the 'data' parameter, 
+ *  and whose 'next' field points to the existing head node; if the list is empty 
+ *  (i.e.: head == null), assign head to your new node and set next to null.
+ */
+void prepend(list_t *list, void *data);
+
+/** Sets the current position pointer of 'list' to point at the head. */
+void reset(list_t *list);
+
+/** Returns the object pointer in the node pointed to by 'current' (remember:
+ *  'current' is a field in 'list') and advance the 'current' pointer to the next 
+ *  node. If 'current' == null, then return null. 
+ */
+void *next(list_t *list);
+```
+
+### Testing
+
+The [listtest.c]() driver provided currently only prints the contents of `num_list`. 
+Your job is to extend the existing tests so that it prints out both the contents of 
+`fruit_list` and `car_list`. 
+
+Iterate and use your `next()` method to access to the contents of the lists,
+formatting your output like so (*notice the absence of trailing comma's*):
+
+```c
+num_list: 25, 20, 15, 10, 5
+fruit_list: banana, peach, orange, apple
+car_list: [Dodge Caravan 2003], [Nissan Altima 2006], [Chevrolet Impala 2007]
+```
+
+## Lab execution and handin
+
+Assuming you are in the correct directory, all you need to do is type `make` followed by
+`./lab5` to run the `listtest` driver. 
+
+When you're finished, and you are confident your work is *adequately commented* and 
+*correct*, go ahead and 'tarify' with the following command:
+```
+tar cvf lab5_handin.tar list.h list.c listtest.c MakeFile
+```
+and submit the resulting `lab5_handin.tar` to the appropriate bucket on 
+[handin](https://handin.cs.clemson.edu/courses/).
