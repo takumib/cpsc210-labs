@@ -26,7 +26,7 @@ granularity -- indicating where we're headed over the course of the semester:
 * raytracer related functions and object oriented programming in C++
 
 
-Finally, as with most things, some of the labs we'll be doing over the course of the 
+Finally, as with most things, some of the labs we'll be doing throughout the 
 semester will require a certain level of knowledge and patience to understand and 
 complete. Therefore, please make an effort to attend the lecture portion of the course 
 to ensure that you are on track for each week's lab. It hurts both your classmates 
@@ -79,15 +79,14 @@ entirely on your performance and mastery of the weekly labs*.
 
 An "A" grade on each lab is expected of each student. This entails attending the lab 
 (on time!), completing the lab according to the specifications given, and code quality. 
-Even if you have perfect functionality, points will be deducted for blantantly sloppy, 
-partially correct solutions and/or poorly commented code. If you are absent 
-(and it's not cleared with one of the TAs), you get a zero for that week's lab: This is 
-non-negotiable.
+Even if you have perfect functionality in terms of test cases, points will be deducted 
+for blantantly sloppy, partially correct solutions and/or poorly commented code. If you 
+are absent (and it's not cleared with one of the TAs), you get a zero for that week's 
+lab: This is non-negotiable.
 
-The labs are not designed to be nearly as taxing as weekly homework assignments 
-(if your instructor indeed gives these) and *should* be entirely doable within the 2 
-hours provided each week -- though we do give a whole 24 hour window to complete
-and submit the lab.
+The labs are not designed to be nearly as taxing as weekly homework assignments and 
+*should* be entirely doable within the 2 hours provided each week -- though we do give a 
+whole 24 hour window to complete and submit the lab.
 
 The weekly labs will be posted and downloadable here on Github (so bookmark this page).
 When completed, each lab should be submitted electronically through the 
@@ -102,12 +101,12 @@ grade's posting. You can view your lab grades through
 * do ask questions if you are confused
 
 * don't simply throw up your hands and say 'I have no idea what to do'; this is not 
-productive and moreover, isn't terribly helpful to the TAs
+productive, and moreover, isn't terribly helpful to the TAs
 
-* don't ask: 'is this right?'; what does the compiler tell you? have you even tried 
+* don't ask: 'is this right?'; well, what does the compiler tell you? have you even tried 
 compiling??
 
-* *please* don't comment every single line of code; so none of this please:
+* don't comment every single line of code; so none of this please:
 	```c
 	//libraries
 	#include <stdio.h> ...
@@ -120,9 +119,9 @@ compiling??
 	```
 	this isn't intelligent commenting and, frankly, will only serve to annoy and exhaust 
 	those who have to read your code. Instead, write meaningful, informative comments for
-	the parts of your code that genuinely require some commentary -- the place(s) where 
-	the core logic of your program is carried out. Effective commenting like anything is 
-	a skill that must be developed over time. For more, refer to [this]().
+	the parts of your logic that genuinely require some commentary. Like anything,
+	effective commenting takes practice and is a skill developed over time. For more, 
+	refer to [this]().
 
 ## The fine print
 
