@@ -1,2 +1,2 @@
-# cpsc210-labs
-Clemson University CPSC210 -- Programming Methodology
+# CPSC210 -- Programming Methodology Labs
+This is the home page for Computer Science 210, Undergraduate Programming Methodology, at Clemson University
