@@ -143,7 +143,7 @@ is supposed to accomplish.
 ```c
 /** Creates and returns a 'new' list controller object. To implement this correctly,
  *  you're going to need to understand how to allocate memory in C using the malloc 
- *  ('M'emory'ALLOC'cation) function, which you can read more about here: 
+ *  ('M'emory'ALLOC'cation) function.
  */
 list_t *init();
 
