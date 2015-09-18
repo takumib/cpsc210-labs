@@ -3,7 +3,7 @@
 This is the home page for all **lab sections** of Computer Science 210, Programming 
 Methodology, at Clemson University
 
-# Abstract
+# Lab abstract
 
 In learning any new concept, there are few (if any) real substitutes for putting into
 practice the ideas posed in the classroom. This holds especially true for an intermediate 

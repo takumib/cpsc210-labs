@@ -2,11 +2,12 @@
 
 In this lab you will be writing a bare-bones implementation of a singly linked list. 
 When you're done with this lab, you should understand and be able to employ 
-"void" pointers in your code, gain some familiarity with developing type-general 
+"void" pointers in your code, gain some familiarity with developing type-general, linked
 data-structures, and work more effectively with pointers in general.
 
-You download your complete starter kit [here]() or simply peruse the default [lab sources](https://github.com/Welchd1/cpsc210-labs/tree/master/labs/lab5/src) on 
-github directly.
+You can download your complete starter kit [here]() or peruse the default 
+[lab sources](https://github.com/Welchd1/cpsc210-labs/tree/master/labs/lab5/src) here on 
+Github.
 
 ## Background: void pointers and type casting
 
@@ -87,8 +88,9 @@ was discussed in two key respects, **so pay attention**:
 instead be added to the **head** (front) of the list. 
 
 ### Key structures
-In [list.h]() we provide two structures that give us everything we need to implement the desired
-list data structure. 
+In [list.h](https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab5/src/list.h) we 
+provide two structures that give us everything we need to implement the desired list data 
+structure. 
 
 #### `node_t`
 The first of these is `node_t`:
@@ -135,8 +137,8 @@ our illustration:
 ### List functions
 
 Here are prototypes for the list functions that you are expected to implement. Each is 
-preceded by an *informal* specification that not only points you to helpful external 
-resources, but also describes what the function is supposed to do.
+preceded by an *informal* specification that describes at a high level what the function 
+is supposed to accomplish.
 
 ```c
 /** Creates and returns a 'new' list controller object. To implement this correctly,
@@ -159,28 +161,50 @@ void reset(list_t *list);
  *  'current' is a field in 'list') and advance the 'current' pointer to the next 
  *  node. If 'current' == null, then return null. 
  */
-void *next(list_t *list);
+void *getnext(list_t *list);
 ```
 
 ### Testing
 
-The [listtest.c]() driver provided currently only prints the contents of `num_list`. 
-Your job is to extend the existing tests so that it prints out both the contents of 
-`fruit_list` and `car_list`. 
+Assuming you are in the directory housing your code, to run all you need to do is type 
+`make` followed by `./lab5` to execute the `listtest` driver. Also, typing `make clean` 
+will freshen your current working directory by deleting any gcc-generated `*.o` 
+files, etc.
+
+The [listtest.c]
+(https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab5/src/listtest.c) driver 
+provided currently only prints the contents of `num_list`. Your job is to extend the 
+existing tests so that it prints out both the contents of `fruit_list` and `car_list`. 
 
 Iterate and use your `next()` method to access to the contents of the lists,
 formatting your output like so (*notice the absence of trailing comma's*):
 
 ```c
-num_list: 25, 20, 15, 10, 5
-fruit_list: banana, peach, orange, apple
-car_list: [Dodge Caravan 2003], [Nissan Altima 2006], [Chevrolet Impala 2007]
+num_list: 25, 20, 15, 10, 5,
+fruit_list: banana, peach, orange, apple,
+car_list: [Dodge Caravan 2003], [Nissan Altima 2006], [Chevrolet Impala 2007],
 ```
 
-## Lab execution and handin
+## Hints
 
-Assuming you are in the correct directory, all you need to do is type `make` followed by
-`./lab5` to run the `listtest` driver. 
+* When implementing `init()` remember to initialize `current` and `head` 
+fields to `NULL`. If you don't do this, asking if some field of your list `== NULL` will 
+likely not work (in all likelihood you'll get a segmentation fault).
+
+* There are two cases to deal with in the implemention of `prepend()`: one in which the
+list you're appending to is empty (how do we detect this?), and the more general case 
+when the list already contains one or more elements.
+
+* When you `prepend()` an element to your list, head should be reassigned to point at 
+the newly appended element, *and current should also be re-assigned to the 
+head with it*.
+
+* When printing the contents of your lists in `listtest.c`, *do not* make the condition
+of your while loop `while (next(list1) != NULL) {..}`. Why? Think about what `getnext()` 
+is actually doing to the list, and you should realize why you don't want to call this as 
+within your loop condition check.
+
+## Lab execution and handin
 
 When you're finished, and you are confident your work is *adequately commented* and 
 *correct*, go ahead and 'tarify' with the following command:
