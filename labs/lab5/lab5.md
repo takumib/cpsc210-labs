@@ -205,7 +205,7 @@ of your while loop `while (next(list1) != NULL) {..}`. Why? Think about what `ge
 is actually doing to the list, and you should realize why you don't want to call this as 
 within your loop condition check.
 
-## Submission
+## Handin
 
 When you're finished, and you are confident your work is *adequately commented* and 
 *correct*, go ahead and 'tarify' with the following command:

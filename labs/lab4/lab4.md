@@ -107,7 +107,7 @@ implementing this function first.
 * If you're unsure how to handle the vector reference parameterizing `vec_copy()`, refer 
 to [this](http://www.cs.usfca.edu/~wolber/SoftwareDev/C/CStructs.htm).
 
-## Submission
+## Handin
 
 When you're finished, and you are confident your work is *adequately commented* and 
 *correct*, go ahead and 'tarify' with the following command:
