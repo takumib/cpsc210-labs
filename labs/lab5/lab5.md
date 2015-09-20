@@ -5,7 +5,8 @@ When you're done with this lab, you should understand and be able to employ
 "void" pointers in your code, gain some familiarity with developing type-general, linked
 data-structures, and work more effectively with pointers in general.
 
-You can download your complete starter kit [here]() or peruse the default 
+You can download your complete lab 5 starter kit on the 
+[releases page](https://github.com/Welchd1/cpsc210-labs/releases) or peruse the default 
 [lab sources](https://github.com/Welchd1/cpsc210-labs/tree/master/labs/lab5/src) here on 
 Github.
 
@@ -177,7 +178,7 @@ provided currently only prints the contents of `num_list`. Your job is to extend
 existing tests so that it prints out both the contents of `fruit_list` and `car_list`. 
 
 Iterate and use your `next()` method to access to the contents of the lists,
-formatting your output like so (*notice the absence of trailing comma's*):
+formatting your output like so:
 
 ```c
 num_list: 25, 20, 15, 10, 5,
@@ -204,7 +205,7 @@ of your while loop `while (next(list1) != NULL) {..}`. Why? Think about what `ge
 is actually doing to the list, and you should realize why you don't want to call this as 
 within your loop condition check.
 
-## Lab execution and handin
+## Submission
 
 When you're finished, and you are confident your work is *adequately commented* and 
 *correct*, go ahead and 'tarify' with the following command:
