@@ -18,9 +18,9 @@ vector functions in advance.
 
 ### Representing vectors with `vector_t`
 
-In [vector.h]() we provide you with the skeleton of a vector 
-struct (shown below) that you'll need to complete before continuing your library 
-implementation.
+In [vector.h](https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab4/src/vector.h) 
+we provide you with the skeleton of a vector struct (shown below) that you'll need to
+ complete before continuing your library implementation.
 ```c
 typedef struct vector {
     //TODO: this needs three components: x, y, and z of type double
