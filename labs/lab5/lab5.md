@@ -157,15 +157,16 @@ list_t *init();
 /** Given an existing (possibly empty) 'list' and a pointer to a piece of 'data', 
  *  this method creates a new node whose data field points to the 'data' parameter, 
  *  and whose 'next' field points to the existing head node; if the list is empty 
- *  (i.e.: head == null), assign head to your new node and set next to null.
+ *  (i.e.: head == null), assign head to your new node and set next to null. This
+ *  function should also make 'current' point to the new node (i.e.: the new 'head').
  */
 void prepend(list_t *list, void *data);
 
 /** Sets the current position pointer of 'list' to point at the head. */
 void reset(list_t *list);
 
-/** Returns the object pointer in the node pointed to by 'current' (remember:
- *  'current' is a field in 'list') and advance the 'current' pointer to the next 
+/** Returns a pointer to the data field of the node pointed to by 'current' (remember:
+ *  'current' is a field in 'list') and advances the 'current' pointer to the next 
  *  node. If 'current' == null, then return null. 
  */
 void *getnext(list_t *list);
