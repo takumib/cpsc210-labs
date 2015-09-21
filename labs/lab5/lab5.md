@@ -74,6 +74,12 @@ or alteratively
 sp = p;                // approach #2
 sp->f1 = 6;
 ```
+##Downloading Files
+
+* First, create the lab5 directory under your class directory (cpsc2101).
+* Then type: wget https://github.com/Welchd1/cpsc210-labs/releases/download/5.0.0/lab5.zip
+* After this decompress the tar by typing: unzip lab5.zip
+* Finally, remove the zip file: rm lab5.zip
 
 ##Task: list implementation
 
