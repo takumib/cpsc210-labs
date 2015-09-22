@@ -130,7 +130,7 @@ The second, and final piece of our implementation puzzle is `list_t`:
 typedef struct list {
    node_t *current;		// current list position 
    node_t *head;		// the head (starting node) of our list
-} node_t;
+} list_t;
 ```
 
 You can think of `list_t` as the manager, or controller, of an entire list. The `list_t`
