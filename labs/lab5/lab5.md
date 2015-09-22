@@ -5,10 +5,20 @@ When you're done with this lab, you should understand and be able to employ
 "void" pointers in your code, gain some familiarity with developing type-general, linked
 data-structures, and work more effectively with pointers in general.
 
+### Housekeeping
 You can download your complete lab 5 starter kit on the 
 [releases page](https://github.com/Welchd1/cpsc210-labs/releases) or peruse the default 
 [lab sources](https://github.com/Welchd1/cpsc210-labs/tree/master/labs/lab5/src) here on 
-Github.
+Github*
+
+*Please remember to practice good organization when downloading your files, i.e.:
+
+* First, create a lab 5 directory under your class directory (should be something like cpsc210).
+* Then type: `wget https://github.com/Welchd1/cpsc210-labs/releases/download/5.0.0/lab5.zip `
+* After this decompress the tar, `unzip lab5.zip`
+* Then remove the zip file: `rm lab5.zip`
+
+These instructions should be pretty much routine to you at this point, and as such, will disappear from future lab handouts.
 
 ## Background: void pointers and type casting
 
@@ -74,12 +84,6 @@ or alteratively
 sp = p;                // approach #2
 sp->f1 = 6;
 ```
-##Downloading Files
-
-* First, create the lab5 directory under your class directory (cpsc2101).
-* Then type: wget https://github.com/Welchd1/cpsc210-labs/releases/download/5.0.0/lab5.zip
-* After this decompress the tar by typing: unzip lab5.zip
-* Finally, remove the zip file: rm lab5.zip
 
 ##Task: list implementation
 
