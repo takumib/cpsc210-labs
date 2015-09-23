@@ -171,7 +171,7 @@ void reset(list_t *list);
 
 /** Returns a pointer to the data field of the node pointed to by 'current' (remember:
  *  'current' is a field in 'list') and advances the 'current' pointer to the next 
- *  node. If 'current' == null, then return null. 
+ *  node.
  */
 void *getnext(list_t *list);
 ```
