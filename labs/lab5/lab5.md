@@ -5,10 +5,20 @@ When you're done with this lab, you should understand and be able to employ
 "void" pointers in your code, gain some familiarity with developing type-general, linked
 data-structures, and work more effectively with pointers in general.
 
+### Housekeeping
 You can download your complete lab 5 starter kit on the 
 [releases page](https://github.com/Welchd1/cpsc210-labs/releases) or peruse the default 
 [lab sources](https://github.com/Welchd1/cpsc210-labs/tree/master/labs/lab5/src) here on 
-Github.
+Github*
+
+*Please remember to practice good organization when downloading your files, i.e.:
+
+* First, create a lab 5 directory under your class directory (should be something like cpsc210).
+* Then type: `wget https://github.com/Welchd1/cpsc210-labs/releases/download/5.0.0/lab5.zip `
+* After this decompress the tar, `unzip lab5.zip`
+* Then remove the zip file: `rm lab5.zip`
+
+These instructions should be pretty much routine to you at this point, and as such, will disappear from future lab handouts.
 
 ## Background: void pointers and type casting
 
@@ -120,7 +130,7 @@ The second, and final piece of our implementation puzzle is `list_t`:
 typedef struct list {
    node_t *current;		// current list position 
    node_t *head;		// the head (starting node) of our list
-} node_t;
+} list_t;
 ```
 
 You can think of `list_t` as the manager, or controller, of an entire list. The `list_t`
@@ -151,16 +161,17 @@ list_t *init();
 /** Given an existing (possibly empty) 'list' and a pointer to a piece of 'data', 
  *  this method creates a new node whose data field points to the 'data' parameter, 
  *  and whose 'next' field points to the existing head node; if the list is empty 
- *  (i.e.: head == null), assign head to your new node and set next to null.
+ *  (i.e.: head == null), assign head to your new node and set next to null. This
+ *  function should also make 'current' point to the new node (i.e.: the new 'head').
  */
 void prepend(list_t *list, void *data);
 
 /** Sets the current position pointer of 'list' to point at the head. */
 void reset(list_t *list);
 
-/** Returns the object pointer in the node pointed to by 'current' (remember:
- *  'current' is a field in 'list') and advance the 'current' pointer to the next 
- *  node. If 'current' == null, then return null. 
+/** Returns a pointer to the data field of the node pointed to by 'current' (remember:
+ *  'current' is a field in 'list') and advances the 'current' pointer to the next 
+ *  node.
  */
 void *getnext(list_t *list);
 ```
