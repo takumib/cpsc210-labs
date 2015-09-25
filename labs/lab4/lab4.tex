@@ -1,0 +1,175 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{listings}
+%\usepackage{parskip}
+\usepackage{mdframed} %nice frames
+
+\lhead{CpSc 210: Programming Methodology}
+\chead{\empty}
+\rhead{Fall 2015}
+\lfoot{\empty}
+\cfoot{\thepage}
+\rfoot{\empty}
+
+\definecolor{light-gray}{gray}{0.93}
+\definecolor{text-gray}{gray}{0.22}
+
+\lstset{
+	basicstyle=\color{text-gray}\ttfamily,
+	columns=fixed,
+	fontadjust=true,
+	basewidth=0.5em
+}
+
+\color{text-gray}
+\begin{document}
+\title{\vspace{-.35in}Lab \#4: Vector functions}
+\date{\empty}
+\maketitle
+
+\pagestyle{fancy}
+\thispagestyle{fancy}
+
+\vspace{-.75in}
+\section{Objectives}
+In this lab you're going to be implementing several functions that will allow us to perform vector arithmetic. If you're somewhat hazy on vectors, go ahead and read up on them here:
+\begin{center}
+\texttt{http://www.mathhands.com/104/hw/104c06s08ns.pdf}
+\end{center}
+
+\subsection{Downloading}
+
+When you're confident that you at least understand conceptually what a vector is and how it is mathematically represented, go ahead and download your complete starter kit by following the instructions below:
+
+\begin{itemize}
+\item first, create a \texttt{lab4} directory under your existing cpsc 210 lab directory 
+\item then type \texttt{wget ...}
+\item after this, decompress the file with \texttt{unzip lab4.zip}
+\item finally, delete the packaged download by typing \texttt{rm lab4.zip}
+\end{itemize}
+
+\section{Task: implement a 3d vector function library}
+
+Since vectors are commonplace in most raytracers -- such as the one you'll soon be working on -- we'll use this lab to build up a library of 3d vector functions in advance. 
+
+\subsection{Representing vectors in C with structs}
+
+In \texttt{vector.h} we provide you with the skeleton of a vector struct (shown below) that you'll need to complete before continuing your library implementation.
+
+\begin{mdframed}[backgroundcolor=light-gray, innerleftmargin=10, innertopmargin=1,innerbottommargin=1,linecolor=light-gray]
+\begin{lstlisting}
+typedef struct vector {
+    //TODO: this needs three components: x, y, and z of type double
+} vector_t;
+\end{lstlisting}
+\end{mdframed} 
+
+\subsection{More info on structs}
+
+You can think of a struct as an \textit{aggregate type}, capable of housing zero or more variable declarations. The variable declaration(s) found within a struct are typically referred to as \textit{fields}. For a contrived example, the following is a hypothetical struct for storing student information:
+
+\begin{mdframed}[backgroundcolor=light-gray, innerleftmargin=10, innertopmargin=1,innerbottommargin=1,linecolor=light-gray]
+\begin{lstlisting}
+struct student_info {
+    int age;
+    double gpa;
+}
+\end{lstlisting}
+\end{mdframed} 
+
+The struct declared above contains two fields: \texttt{age} and \texttt{gpa}. Notice that fields can be  declared with different types. To create and start using the above struct, we can declare variables of type \texttt{student\_info} like so:
+\begin{mdframed}[backgroundcolor=light-gray, innerleftmargin=10, innertopmargin=1,innerbottommargin=1,linecolor=light-gray]
+\begin{lstlisting}
+student_info x;
+\end{lstlisting}
+\end{mdframed} 
+Now that we have a variable \texttt{x} of type \texttt{student\_info}, we can assign values (of the appropriate type!) to the fields of \texttt{x} in a straightforward way:
+
+\begin{mdframed}[backgroundcolor=light-gray, innerleftmargin=10, innertopmargin=1,innerbottommargin=1,linecolor=light-gray]
+\begin{lstlisting}
+x.age = 23;
+x.gpa = 2.6;
+\end{lstlisting}
+\end{mdframed}
+
+\subsubsection{References to structs}
+
+When dealing with \textit{references} to structs, C employs slightly different notation for accessing fields. Consider the following function that takes a pointer to a \texttt{student\_info} struct as a parameter.
+
+\begin{mdframed}[backgroundcolor=light-gray, innerleftmargin=10, innertopmargin=1,innerbottommargin=1,linecolor=light-gray]
+\begin{lstlisting}
+void foo(student_info* info) {
+    printf("age: \%d", info->age, info->gpa);
+}
+\end{lstlisting}
+\end{mdframed}
+
+Here, because \texttt{info} is pointer to a struct, we use C's \texttt{->} operator (as opposed to `\texttt{.}' for nonpointer struct-typed variables) to access fields. It's worth noting that the arrow operator used above is merely syntactic sugar\footnote{The term ``syntactic sugar" simply means defining some syntactic shortcuts in the language that make it easier for programmars to type and/or read certain constructs.} for the more familiar (but uglier expression): \texttt{(info*).age}. 
+
+\newpage
+\subsection{Vector functions}
+
+The following listing contains prototypes for some the functions you'll need to implement as part of the lab (the complete list can be found in \texttt{vectors.h}).
+
+\begin{mdframed}[backgroundcolor=light-gray, innerleftmargin=10, innertopmargin=1,innerbottommargin=1,linecolor=light-gray]
+\begin{lstlisting}
+/** Returns the length (magnitude) of v: square x, y, z; sum
+ *  the results, then return the square root of the sum.
+ */
+double vec_len(vector_t v);
+
+/** Returns a new vector whose components are normalized against v's.
+ *  Take each x, y, z of v and divide by the length of v for each.
+ */
+vector_t vec_normalize(vector_t v);
+
+/** Returns a new vector whose components are multiplied by some 
+ *  constant, scale: scale * x, scale * y, scale * z.
+ */
+vector_t vec_scale(vector_t v, double scale);
+    
+/** Returns the dot product of two vectors v1 dot v2: (x1 * x2) + 
+ *  (y1 * y2) + (z1 * z2).
+ */
+double vec_dot(vector_t v1, vector_t v2);
+\end{lstlisting}
+\end{mdframed}
+
+\section{Testing}
+
+Assuming you are in the directory housing your code, to run all you need to do is type \texttt{make}. This will compile and generate an executable for your code named \texttt{lab4}. To run the generated executable, simply type \texttt{./lab4}. Additionally, typing \texttt{make clean} will freshen your current working directory by deleting any gcc-generated \texttt{*.o} files. \\
+
+\noindent Here is the expected output:
+
+\begin{mdframed}[backgroundcolor=light-gray, innerleftmargin=10, innertopmargin=1,innerbottommargin=1,linecolor=light-gray]
+\begin{lstlisting}
+v1:    2.000    4.000    7.000
+v2:    1.000   -3.000    2.000
+v1 - v2 = :    1.000    7.000    5.000
+Copy of v2:    1.000   -3.000    2.000
+v1 dot v2 is    4.000 
+Length of v1 is    8.307 
+v1 scaled by its 6:   12.000   24.000   42.000
+v1 normalized:    0.241    0.482    0.843
+v1 + v2 = :    3.000    1.000    9.000
+\end{lstlisting}
+\end{mdframed} 
+
+\section{Hints}
+\begin{itemize}
+\item There are 4 whitespaces separating output of each vector's components in the expected output.
+\item Printing a double with \texttt{\%.3f} in your format string limits the number of trailing decimal places to 3.
+\item When you first run the test driver, you'll likely see very little output. This is probably because you have not yet implemented \texttt{vec\_print()}. So you might consider implementing this function first.
+\item If after reading this handout in its entirety you're still unsure how to handle the \texttt{vector\_t} reference parameterizing \texttt{vec\_copy()}, refer to this.
+\end{itemize}
+
+\section{Handin}
+
+When you're finished, and you are confident your work is \textbf{adequately commented} and \textbf{correct}, go ahead and `tarify' with the following command:
+\begin{center}
+\texttt{tar cvf lab4\_handin.tar vector.h vector.c vectortest.c output.txt MakeFile}
+\end{center}
+\noindent and submit the resulting \texttt{lab4\_handin.tar} to the appropriate bucket on handin.
+\end{document}
