@@ -1,7 +1,10 @@
-\documentclass[11pt]{article}
+\documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{fancyhdr}
+\usepackage{xcolor}
 \usepackage{listings}
+%\usepackage{parskip}
+\usepackage{mdframed} %nice frames
 
 \lhead{CpSc 210: Programming Methodology}
 \chead{\empty}
@@ -10,11 +13,19 @@
 \cfoot{\thepage}
 \rfoot{\empty}
 
-%\setlength{\parindent}{0pt}
-%\setlength{\parskip}{4pt}
+\definecolor{light-gray}{gray}{0.93}
+\definecolor{text-gray}{gray}{0.22}
 
+\lstset{
+	basicstyle=\color{text-gray}\ttfamily,
+	columns=fixed,
+	fontadjust=true,
+	basewidth=0.5em
+}
+
+\color{text-gray}
 \begin{document}
-\title{\vspace{-.35in}Lab \#4: Vector functions}
+\title{\vspace{-.35in}Lab Syllabus}
 \date{\empty}
 \maketitle
 
@@ -22,21 +33,6 @@
 \thispagestyle{fancy}
 
 \vspace{-.75in}
-\section{Objectives}
-There are several objectives to this lab. First, you will gain experience using
-{\em abstract classes} to simplify application construction. Second, you will
-gain additional experience applying the {\em Template Method} pattern. Third, you will
-gain additional experience using Java {\em inheritance}. Finally, (the moment
-you've all been waiting for), you will be introduced to the {\em Swing} class
-library.
-
-\section{Overview}
-For this lab, you will implement a simple GUI application using the Java Swing
-library. The application will display a window that contains a list of contacts
-organized in a table. Each row will correspond to a single contact, with
-columns corresponding to the contact's first name, last name, email address,
-and favorite color. The first three columns will display simple text strings.
-The final column will use a custom rendering component to fill the table cell
-based on the contact's favorite color.
+\section{Abstract}
 
 \end{document}
