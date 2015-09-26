@@ -96,33 +96,6 @@ If you have a problem with a lab grade, come talk to a TA within at most a week 
 grade's posting. You can view your lab grades through 
 [Blackboard](https://bb.clemson.edu/).
 
-## Some do's and don'ts
-
-* do ask questions if you are confused
-
-* don't simply throw up your hands and say 'I have no idea what to do'; this is not 
-productive, and moreover, isn't terribly helpful to the TAs
-
-* don't ask: 'is this right?'; well, what does the compiler tell you? have you even tried 
-compiling??
-
-* don't comment every single line of code; so none of this please:
-	```c
-	//libraries
-	#include <stdio.h> ...
-	```
-	or even more egregious:
-	```c
-	int i; //declare an integer variable 
-	//check if i is not equal to 0
-	if (i != 0) { ... } ..
-	```
-	this isn't intelligent commenting and, frankly, will only serve to annoy and exhaust 
-	those who have to read your code. Instead, write meaningful, informative comments for
-	the parts of your logic that genuinely require some commentary. Like anything,
-	effective commenting takes practice and is a skill developed over time. For more, 
-	refer to [this]().
-
 ## The fine print
 
 ### Disability access
