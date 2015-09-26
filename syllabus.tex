@@ -1,10 +1,11 @@
 \documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{fancyhdr}
-\usepackage{xcolor}
+\usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{listings}
-%\usepackage{parskip}
-\usepackage{mdframed} %nice frames
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{mdframed}
 
 \lhead{CpSc 210: Programming Methodology}
 \chead{\empty}
@@ -15,12 +16,18 @@
 
 \definecolor{light-gray}{gray}{0.93}
 \definecolor{text-gray}{gray}{0.22}
+\definecolor{text-gray}{gray}{0.22}
 
 \lstset{
 	basicstyle=\color{text-gray}\ttfamily,
 	columns=fixed,
 	fontadjust=true,
 	basewidth=0.5em
+}
+
+\hypersetup{
+	colorlinks=true,    
+	urlcolor=RubineRed,
 }
 
 \color{text-gray}
@@ -34,5 +41,81 @@
 
 \vspace{-.75in}
 \section{Abstract}
+
+In learning any new concept, there are few (if any) real substitutes for putting into practice the ideas posed in the classroom. This holds especially true for an intermediate computer science course in which you're often expected to learn new languages and concepts in parallel. \\
+
+\noindent This lab therefore exists to provide you with a weekly means of practicing and building upon some of the ideas that you might've only briefly seen in the lecture portion of the course. This will allow you to gain some much needed experience `at the keyboard' so to speak, and should help prepare you for the course's (more challenging) future projects and exams. \\
+
+\noindent Here is a tentative, high level ordering -- at a roughly month-by-month level of granularity -- indicating where we're headed over the course of the semester:
+
+\begin{itemize}
+\item unix introduction, lower level C datatypes
+\item pointers: void \& function, basic linked data structures
+\item raytracer related functions and object oriented programming in C++
+\end{itemize}
+
+\noindent Finally, as with most things, some of the labs we'll be doing throughout the semester will require a certain level of knowledge and patience to understand and complete. Therefore, please make an effort to attend the lecture portion of the course to ensure that you are on track for each week's lab. It hurts both your classmates (and you!) when you come in knowingly unprepared.
+
+\section{Administrivia}
+
+\begin{itemize}
+\item Section 1: Monday 4:00pm - 5:50pm McAdams 110D
+\item Section 2: Wednesday 2:00pm - 3:50pm McAdams 110D
+\item Section 3: Thursday 6:00pm - 7:50pm McAdams 110D
+\item Section 4: Tuesday 2:00pm - 3:50pm McAdams 110E
+\end{itemize}
+
+\begin{tabular}{l c}
+	\toprule
+		\multicolumn{2}{c}{Lab TAs} \\
+	\midrule
+		Takumi Bolte		& (\texttt{tbolte@g.clemson.edu}) \\
+		Dan Welch		& (\texttt{dtwelch@g.clemson.edu})  \\
+		Benjamin Adams	& (\texttt{badams7@g.clemson.edu}) \\
+		Thomas Rhea		& (\texttt{trea@g.clemson.edu})  \\
+	\bottomrule
+\end{tabular}
+\section{Instruction format}
+
+Sections will last approximately one hour and fifty minutes (depending on the speed at which people finish the lab, and whether or not the room is needed directly afterwards) one day a week. All programming will be performed in C (and eventually, C++) unless otherwise specified.
+
+\section{Books and references}
+
+While there are of course no prescribed references or textbooks for the lab other than the weekly lab handouts, I'll recommend some regardless:
+
+\subsection{General language reference}
+\begin{itemize}
+\item Brian W. Kernighan, \textit{The C Programming Language}. Prentice Hall, 2nd edition, 1988.
+
+\item \href{http://www.cplusplus.com/reference/}{C++ library reference}
+\end{itemize}
+\subsection{Unix reference}
+
+\begin{itemize}
+\item \href{http://www.cs.clemson.edu/course/cpsc210/Links/compiling.html}{Compiling and executing}
+\item \href{http://www.cs.clemson.edu/course/cpsc210/Links/unix.html}{Terminal command cheatsheet}
+
+\end{itemize}
+\section{Grading}
+
+Of the roughly 13 labs (one for each week of the semester), each is weighted equally and graded on a 100 point scale. \textit{Note that since there is no final exam for lab, your grade rests entirely on your performance with the weekly labs}. \\
+
+\noindent  An ``A" grade on each lab is expected of each student. This entails attending the lab (on time!), completing the lab according to the specifications given, and code quality. Even if you have perfect functionality in terms of test cases, points will be deducted for blantantly sloppy, partially correct solutions and/or poorly commented code. If you are absent (and it's not cleared with one of the TAs), you get a zero for that week's lab: This is non-negotiable. \\
+
+\noindent The labs are not designed to be nearly as taxing as weekly homework assignments, and should be entirely doable within the 2 hours provided each week -- though we do give a whole 24 hour window to complete and submit the lab.\\
+
+\noindent The weekly labs will be posted on the Blackboard lab page for the course. When completed, each lab should be submitted electronically through the CS handin system. \\
+
+\noindent If you have a problem with a lab grade, come talk to a TA within at most a week of the grade's posting. You can view your lab grades through Blackboard.
+
+\section{The fine print}
+
+\subsection{Disability access}
+
+It is university policy to provide, on a flexible and individualized basis, reasonable accommodations to students who have disabilities. Students with disabilities are encouraged to contact Dr. Arlene Stewart (656-6848), Director of Student Disability Services, within the first month of classes, to discuss their individual needs for accommodation. Students should present a Faculty Accommodation Letter from Student Disability Services when they meet with instructors. Student Disability Services (656-6468; \texttt{sds-l@clemson.edu}) is located in the Academic Success Building, Suite 239. Please be aware that accommodations are not retroactive and new Faculty Accommodation Letters must be presented each semester.
+
+\subsection{Title IX (sexual harassment) statement}
+
+Clemson University is committed to a policy of equal opportunity for all persons and does not discriminate on the basis of race, color, religion, sex, sexual orientation, gender, pregnancy, national origin, age, disability, veteran's status, genetic information or protected activity (e.g.: opposition to prohibited discrimination or participation in any compliant process, etc) in employment, education programs and activities, admissions and financial aid. This includes a prohibition against sexual harassment and sexual violence as mandated by Title IX of the Education Amendments of 1972
 
 \end{document}
