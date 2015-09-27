@@ -4,6 +4,7 @@
 
 list* list_create()
 {
+    return NULL;
 }
 
 void list_append(list* l, void* item)
