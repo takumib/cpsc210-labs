@@ -1,6 +1,7 @@
 *.o
 *.class
 *.gch
+*.out
 *.pdf
 *.aux
 *.log
