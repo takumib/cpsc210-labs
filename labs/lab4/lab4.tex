@@ -113,7 +113,7 @@ Here, because \texttt{info} is pointer to a struct, we use C's \texttt{->} opera
 \newpage
 \subsection{Vector functions}
 
-The following listing contains prototypes for some the functions you'll need to implement as part of the lab (the complete list can be found in \texttt{vectors.h}).
+The following listing contains prototypes for some the functions you'll need to implement as part of the lab (the complete list can be found in \texttt{vectors.c}).
 
 \begin{mdframed}[backgroundcolor=light-gray, innerleftmargin=10, innertopmargin=1,innerbottommargin=1,linecolor=light-gray]
 \begin{lstlisting}
@@ -136,6 +136,7 @@ vector vec_scale(vector v, double scale);
  *  (y1 * y2) + (z1 * z2).
  */
 double vec_dot(vector v1, vector v2);
+...
 \end{lstlisting}
 \end{mdframed}
 
@@ -164,7 +165,7 @@ v1 + v2 = :    3.000    1.000    9.000
 \item There are 4 whitespaces separating output of each vector component in the expected output.
 \item Printing a double with \texttt{\%.3f} in your format string limits the number of trailing decimal places to 3.
 \item When you first run the test driver, you'll likely see very little output. This is probably because you have not yet implemented \texttt{vec\_print()}. So you might consider implementing this function first.
-\item If after reading this handout in its entirety, and you're still unsure how to handle the \texttt{vector\_t*} parameterizing \texttt{vec\_copy()}, refer to this.
+\item If after reading this handout in its entirety, you're still unsure how to handle the \texttt{vector*} parameterizing \texttt{vec\_copy()}, refer to \href{http://www.cs.usfca.edu/~wolber/SoftwareDev/C/CStructs.htm}{this}.
 \end{itemize}
 
 \section{Handin}
