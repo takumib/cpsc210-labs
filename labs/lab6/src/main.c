@@ -30,9 +30,10 @@ void list_create_test()
         printGreen("PASSED");
         printf("]\n");
     } else {
-        printf("list_create_test: FAILED]\n");
+        printf("[list_create_test: ");
         printRed("FAILED");
         printf("]\n");
+        exit(-1);
     }
 }
 
