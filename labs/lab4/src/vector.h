@@ -15,19 +15,20 @@
 /** This header file contains our vector representation and some
  *  prototype operations on 3d vectors
  */
-typedef struct {
+typedef struct vector_t {
+	double x, y, z;
     //TODO: this needs three components: x, y, and z of type double
-} vector_t;
+} vector;
 
 /** Prototype operations */
-double vec_len(vector_t  v);
-vector_t vec_normalize(vector_t v);
-vector_t vec_scale(vector_t v, double scale);
-double vec_dot(vector_t v1, vector_t v2);
-vector_t vec_add(vector_t  v1, vector_t  v2);
-vector_t vec_subtract(vector_t  v1, vector_t  v2);
-void vec_copy(vector_t *result_v, vector_t v);
-void vec_print(char *label, vector_t v);
+double vec_len(vector  v);
+vector vec_normalize(vector v);
+vector vec_scale(vector v, double scale);
+double vec_dot(vector v1, vector v2);
+vector vec_add(vector  v1, vector v2);
+vector vec_subtract(vector  v1, vector v2);
+void vec_copy(vector *result_v, vector v);
+void vec_print(char *label, vector v);
 
 #endif
 

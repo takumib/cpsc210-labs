@@ -8,14 +8,14 @@
 #include <stdio.h>
 #include "vector.h"
 
-vector_t v1 = {2.0, 4.0, 7.0};
-vector_t v2 = {1.0, -3.0, 2.0};
+vector v1 = {2.0, 4.0, 7.0};
+vector v2 = {1.0, -3.0, 2.0};
 
 int main(int argc, char* argv[]) {
-	vector_t v3;
-	vector_t v4;
-	vector_t v5;
-	vector_t v6;
+	vector v3;
+	vector v4;
+	vector v5;
+	vector v6;
 	double val;
 
 	vec_print("v1", v1);

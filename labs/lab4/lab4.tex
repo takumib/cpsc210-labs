@@ -1,10 +1,10 @@
 \documentclass[12pt]{article}
 \usepackage[margin=1in]{geometry}
 \usepackage{fancyhdr}
-\usepackage{xcolor}
+\usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{listings}
-%\usepackage{parskip}
-\usepackage{mdframed} %nice frames
+\usepackage{hyperref}
+\usepackage{mdframed}
 
 \lhead{CpSc 210: Programming Methodology}
 \chead{\empty}
@@ -23,6 +23,11 @@
 	basewidth=0.5em
 }
 
+\hypersetup{
+	colorlinks=true,    
+	urlcolor=RubineRed,
+}
+
 \color{text-gray}
 \begin{document}
 \title{\vspace{-.35in}Lab \#4: Vector functions}
@@ -34,10 +39,7 @@
 
 \vspace{-.75in}
 \section{Objectives}
-In this lab you're going to be implementing several functions that will allow us to perform vector arithmetic. If you're somewhat hazy on vectors, go ahead and read up on them here:
-\begin{center}
-\texttt{http://www.mathhands.com/104/hw/104c06s08ns.pdf}
-\end{center}
+In this lab you're going to be implementing several functions that will allow us to perform vector arithmetic. If you're somewhat hazy on vectors, go ahead and read up on them \href{http://www.mathhands.com/104/hw/104c06s08ns.pdf}{here}.
 
 \subsection{Downloading}
 
@@ -60,9 +62,9 @@ In \texttt{vector.h} we provide you with the skeleton of a vector struct (shown 
 
 \begin{mdframed}[backgroundcolor=light-gray, innerleftmargin=10, innertopmargin=1,innerbottommargin=1,linecolor=light-gray]
 \begin{lstlisting}
-typedef struct vector {
+typedef struct vector_t {
     //TODO: this needs three components: x, y, and z of type double
-} vector_t;
+} vector;
 \end{lstlisting}
 \end{mdframed} 
 
@@ -118,22 +120,22 @@ The following listing contains prototypes for some the functions you'll need to 
 /** Returns the length (magnitude) of v: square x, y, z; sum
  *  the results, then return the square root of the sum.
  */
-double vec_len(vector_t v);
+double vec_len(vector v);
 
 /** Returns a new vector whose components are normalized against v's.
  *  Take each x, y, z of v and divide by the length of v for each.
  */
-vector_t vec_normalize(vector_t v);
+vector vec_normalize(vector v);
 
 /** Returns a new vector whose components are multiplied by some 
  *  constant, scale: scale * x, scale * y, scale * z.
  */
-vector_t vec_scale(vector_t v, double scale);
+vector vec_scale(vector v, double scale);
     
 /** Returns the dot product of two vectors v1 dot v2: (x1 * x2) + 
  *  (y1 * y2) + (z1 * z2).
  */
-double vec_dot(vector_t v1, vector_t v2);
+double vec_dot(vector v1, vector v2);
 \end{lstlisting}
 \end{mdframed}
 
@@ -159,10 +161,10 @@ v1 + v2 = :    3.000    1.000    9.000
 
 \section{Hints}
 \begin{itemize}
-\item There are 4 whitespaces separating output of each vector's components in the expected output.
+\item There are 4 whitespaces separating output of each vector component in the expected output.
 \item Printing a double with \texttt{\%.3f} in your format string limits the number of trailing decimal places to 3.
 \item When you first run the test driver, you'll likely see very little output. This is probably because you have not yet implemented \texttt{vec\_print()}. So you might consider implementing this function first.
-\item If after reading this handout in its entirety you're still unsure how to handle the \texttt{vector\_t} reference parameterizing \texttt{vec\_copy()}, refer to this.
+\item If after reading this handout in its entirety, and you're still unsure how to handle the \texttt{vector\_t*} parameterizing \texttt{vec\_copy()}, refer to this.
 \end{itemize}
 
 \section{Handin}
