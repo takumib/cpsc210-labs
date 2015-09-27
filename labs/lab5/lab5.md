@@ -121,7 +121,7 @@ such a node; `null` otherwise
 Given our definition of `node_t`, pictorially, a list of integers such as `[5, 2, 7]` 
 would internally look something like:
 
-![nodes](https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab5/node_diag1.png)
+![nodes](https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab5/figures/node_diag1.png)
 
 #### `list_t`
 
@@ -143,7 +143,7 @@ if the list is empty, `head` points to `null`.
 So in terms of our previous `[5, 2, 7]` example, `list_t` adds the following to 
 our illustration:
 
-![list manager](https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab5/node_diag2.png)
+![list manager](https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab5/figures/node_diag2.png)
 
 ### List functions
 
