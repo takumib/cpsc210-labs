@@ -190,11 +190,11 @@ existing tests so that it prints out both the contents of `fruit_list` and `car_
 
 Iterate and use your `next()` method to access to the contents of the lists,
 formatting your output like so:
-
+            
 ```c
 num_list: 25, 20, 15, 10, 5,
 fruit_list: banana, peach, orange, apple,
-car_list: [Dodge Caravan 2003], [Nissan Altima 2006], [Chevrolet Impala 2007],
+car_list: [Toyota Camry 2010], [Honda Accord 2010], [Ford Mustang 2009],
 ```
 
 ## Hints

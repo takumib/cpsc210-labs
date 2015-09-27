@@ -4,29 +4,29 @@
  */
 #include "list.h"
 
-typedef struct vehicle_type {
+typedef struct car_t {
 	char *make;
 	char *model;
 	int year;
-} veh_t;
+} car;
 
 int main() {
 	int data[] = {5, 10, 15, 20, 25};
  
 	char *fruit[] = {"apple", "orange", "peach", "banana"};
 
-	veh_t vehicles[] = {{"Ford", "Mustang", 2009},
-                        {"Honda", "Accord", 2010},
-                        {"Toyota", "Camry", 2010}};
+	car cars[] = {{"Ford", "Mustang", 2009},
+                  {"Honda", "Accord", 2010},
+                  {"Toyota", "Camry", 2010}};
 
    	int index;
    	int size;
 
 	int *ptr1;
 	char *ptr2;
-	veh_t *ptr3;
+	car *ptr3;
 
-	list_t *list1, *list2, *list3;
+	list *list1, *list2, *list3;
             
     //initialize our lists        
 	list1 = init();
@@ -34,7 +34,7 @@ int main() {
 	list3 = init();
 	
 	//populate each list with the datasets defined above
-	size = sizeof(data)/sizeof(int);
+	size = 5;
 	for (index = 0; index < size; index++) {
 		prepend(list1, &data[index]);
 	}

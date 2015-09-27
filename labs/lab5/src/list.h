@@ -10,21 +10,21 @@
 #include <assert.h>
 
 /** list node  */
-typedef struct node {
-   struct node *next;						// pointer to the next node
-   void *data;								// the data stored at this node
-} node_t;
+typedef struct node_t {
+   struct node_t *next;	// pointer to the next node
+   void *data; 			// the data stored at this node
+} node;
 
 /** list controller */
-typedef struct list {
-   node_t *current;							// current list position 
-   node_t *head;							// the head (start) of our list
-} list_t;
+typedef struct list_t {
+   node *current; 	// current list position 
+   node *head;		// the head (start) of our list
+} list;
 
-/** some function prototypes */
-list_t *init();								// create and initialize list object
-void prepend(list_t *list, void *data); 	// add data to the end of the list
-void reset(list_t *list);              		// reset position pointer
-void *getnext(list_t *list);           		// get the next node from the list
+/** function prototypes */
+list *init();
+void prepend(list *l, void *data);
+void reset(list *l);
+void *getnext(list *l);
 
 #endif

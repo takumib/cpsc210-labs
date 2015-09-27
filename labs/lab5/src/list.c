@@ -4,18 +4,18 @@
  */
 #include "list.h"
 
-list_t *init() {
+list *init() {
 
 }
 
-void prepend(list_t *list, void *data) {
+void prepend(list *l, void *data) {
 
 }
 
-void reset(list_t *list) {
+void reset(list *l) {
 
 }
 
-void* getnext(list_t *list) {
+void* getnext(list *l) {
 
 }
