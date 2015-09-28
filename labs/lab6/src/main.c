@@ -1,3 +1,9 @@
+/*
+ * Author: Takumi Bolte
+ * Last Edited: September 28, 2015
+ * File: main.c
+ * Description: small test engine to print out linked list.
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

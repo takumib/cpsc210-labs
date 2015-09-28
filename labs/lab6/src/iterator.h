@@ -1,3 +1,9 @@
+/*
+ * Author: Takumi Bolte
+ * Last Edited: September 28, 2015
+ * File: iterator.h
+ * Description: iterator header file.
+ */
 #ifndef ITERATOR_H
 #define ITERATOR_H
 

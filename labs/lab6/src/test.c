@@ -1,3 +1,9 @@
+/*
+ * Author: Takumi Bolte
+ * Last Edited: September 28, 2015
+ * File: test.c
+ * Description: small test engine for linked list and iterator operations.
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
