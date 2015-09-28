@@ -151,6 +151,16 @@ The output should look similar to the figure shown below:
 
 ![run](https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab6/figures/run_output.png)
 
+### Hints
+
+* Some of the functions you will implement can be copied from last week such as creating your list and nodes.
+* All of your iterator functions should use just the iterator's current pointer except the iter_remove function which also uses   the list.
+* In your list_at_end function, you do not need to return an actual 0, or 1, you can simply return iter->current == NULL. This   will return the correct result on its own.
+* Whenever you change modify the list inside `list.c` or `iterator.c`, make sure that you think about what your previous and     next pointers should point to, as well as if head and tail should change.
+* Think about the corner cases: am I at the end of the list or beginning of the list? Is there only a single item in the list?
+* When you use `free()`, also set anything pointing to the thing that you free'd to `NULL`.
+* Remember to draw out your nodes and links if you get stuck.
+
 ## Handin
 
 When you're finished, and you are confident your work is *adequately commented* and 
