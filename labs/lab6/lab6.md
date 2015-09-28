@@ -17,6 +17,14 @@ As always, you can either download your complete lab 6 starter kit on the
 [releases page]() or peruse the default starter files [here]
 (https://github.com/Welchd1/cpsc210-labs/tree/master/labs/lab6/src) on GitHub
 
+## Using Tar
+
+Remember when decompressing type:
+
+```
+tar xvzf lab6.tar.gz
+```
+
 ## Tasks 
 
 This lab is separated into two broad tasks: for the first you'll need to implement 
