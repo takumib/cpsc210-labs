@@ -86,9 +86,6 @@ void list_remove_last(list* l);
 
 /** Removes the first node from a non-empty list 'l' */
 void list_remove_first(list* l);
-
-/** Deep copies all elements from list 'l' onto an empty list, 'out' */
-void list_copy(list* l, list* out);
 ```
 ## Task #2: implement an iterator
 
