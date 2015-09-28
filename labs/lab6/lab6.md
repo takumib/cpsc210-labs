@@ -102,20 +102,26 @@ of our linked list, `l`, and a `current` node pointer.
 
 After you get to a point where you've implemented several functions for your linked list,
 (say, `list_create()` and `list_append()`), make sure you're in the directory housing
-your lab files and type `make`. Assuming no errors, go ahead and type `./lab6` to run 
-the provided test driver in `main.c`:
+your lab files and type `make`. Assuming no errors, go ahead and type `make test` to run 
+the provided test driver in `test.c`:
 
 ![testing1](https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab6/figures/test_output.png)
 
 If all goes well you should see a "passed" appear in green next to each test,
 meaning you can be *reasonably* sure that your implementation is working as expected.
 
+### Running
+
+If all of your tests have passed and do not get any segmentation faults,
+you can run the main program that prints out the lists by typing `make`,
+then typing `make run`.
+
 ## Handin
 
 When you're finished, and you are confident your work is *adequately commented* and 
 *correct*, go ahead and 'tarify' with the following command:
 ```
-tar cvf lab6_handin.tar list.h list.c iterator.c iterator.h main.c MakeFile
+make handin
 ```
 and submit the resulting `lab6_handin.tar` to the appropriate bucket on 
 [handin](https://handin.cs.clemson.edu/courses/).
