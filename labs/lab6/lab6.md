@@ -11,7 +11,7 @@ design strategy that separates implementation of a core data structure
 In summary, by the end of this lab you will have at your disposal a robust, efficient 
 linked list and iterator for use in future labs -- not to mention 
 experience in writing increasingly complex functions, such as `remove()` that you'll 
-write for this lab.
+also write for this lab.
 
 As always, you can either download your complete lab 6 starter kit on the 
 [releases page]() or peruse the default starter files [here]
@@ -81,19 +81,34 @@ void list_remove_first(list* l);
 /** Deep copies all elements from list 'l' onto an empty list, 'out' */
 void list_copy(list* l, list* out);
 ```
+## Task #2: implement an iterator
 
+An iterator is what will allow us to traverse, access, and mutate the interior nodes of 
+a linked list. 
 
-### Testing ... testing
+### `iterator` type
 
-After you get to a point where you've implemented one or two of the above operations 
+```c
+typedef struct iterator_t {
+    list* l;
+    node* current;
+} iterator;
+```
+
+The iterator for our list will be represented by a basic structure that pairs an instance
+of our linked list, `l`, and a `current` node pointer.
+
+### Testing
+
+After you get to a point where you've implemented several functions for your linked list,
 (say, `list_create()` and `list_append()`), make sure you're in the directory housing
 your lab files and type `make`. Assuming no errors, go ahead and type `./lab6` to run 
-the provided test driver in `main.c`. 
+the provided test driver in `main.c`:
 
-If all goes well you should see a "passed" next to
-each function (indicating that you've passed all test cases for that function):
+![testing1](https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab6/figures/test_output.png)
 
-
+If all goes well you should see a "passed" appear in green next to each test,
+meaning you can be *reasonably* sure that your implementation is working as expected.
 
 ## Handin
 
