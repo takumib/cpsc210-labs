@@ -130,6 +130,28 @@ node* iter_get(iterator* iter);
 void iter_remove(iterator* iter);
 ```
 
+### A Note about using `malloc()` and `free()`
+
+When using malloc remember the following syntax:
+
+```c
+ /** replace list with the type that you are actually trying to malloc.
+ list* l = (list*)malloc(sizeof(list));
+```
+
+The function `free()` is the accompanying function to `malloc()` that frees up your data.
+When using `free()`, you will only need to call this in your remove functions in `list.c` or `iterator.c`:
+
+```c
+node* n = (node*)malloc(sizeof(node));
+.
+.
+.
+free(n)
+```
+
+Note that we do not try to dereference the pointer. When we use free we simply pass the variable name to free.
+
 ### Testing
 
 After you get to a point where you've implemented several functions for your linked list,
