@@ -114,7 +114,10 @@ meaning you can be *reasonably* sure that your implementation is working as expe
 
 If all of your tests have passed and do not get any segmentation faults,
 you can run the main program that prints out the lists by typing `make`,
-then typing `make run`.
+then typing `make run`, which will run the code from `main.c`.
+The output should look similar to the figure shown below:
+
+![run](https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab6/figures/run_output.png)
 
 ## Handin
 
