@@ -1,90 +1,85 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h>
-#include <sys/types.h>
+#include <string.h>
 
 #include "list.h"
 #include "iterator.h"
 
-void list_create_test();
-void list_append_test();
-void list_remove_first_test();
-void printGreen(char*);
-void printRed(char*);
-
 int main()
 {
-    list_create_test();
-    list_append_test();
-    list_remove_first_test();
+    list* list1 = list_create();
+    list* list2 = list_create();
+    list* list3 = list_create();
+
+    int data[] = {1, 2, 3, 4, 5};
+    char* strings[] = {"a", "b", "c", "d", "e", "f"};
+
+    int data_size = 5;
+    for(int i = 0; i < data_size; i++) {
+        list_append(list1, &data[i]);
+    }
+
+    int string_size = 6;
+    for(int i = 0; i < string_size; i++) {
+        list_append(list2, strings[i]);
+    }
+
+    iterator* iter1 = iter_create(list1);
+
+    printf("Data List Print Test....\n");
+
+    printf("Data List: ");
+    while(!iter_at_end(iter1)) {
+        node* n = iter_get(iter1);
+        int* val = n->data;
+        printf("%d ", *val);
+        iter_advance(iter1);
+    }
+    printf("\n");
+
+    printf("Removing 2nd Element From Data\n");
+    iter1 = iter_create(list1);
+    iter_advance(iter1);
+    iter_remove(iter1);
+
+    printf("Data List: ");
+    while(!iter_at_end(iter1)) {
+        node* n = iter_get(iter1);
+        int* val = n->data;
+        printf("%d ", *val);
+        iter_advance(iter1);
+    }
+    printf("\n");
+
+    printf("\n");
+    printf("String List Print Test.......\n");
+
+    iterator* iter2 = iter_create(list2);
+
+    printf("Strings List: ");
+    while(!iter_at_end(iter2)) {
+        node* n = iter_get(iter2);
+        char* val = n->data;
+        printf("%s ", val);
+        iter_advance(iter2);
+    }
+    printf("\n");
+
+    list_remove_last(list2);
+
+    iter2 = iter_create(list2);
+    printf("Removing Last Element from String List\n");
+    printf("Strings List: ");
+    while(!iter_at_end(iter2)) {
+        node* n = iter_get(iter2);
+        char* val = n->data;
+        printf("%s ", val);
+        iter_advance(iter2);
+    }
+    printf("\n");
+
+    printf("\n");
+    printf("Done Printing\n");
 
     return 0;
-}
-
-void list_create_test()
-{
-    list* list = list_create();
-    if(list != NULL) {
-        free(list);
-        printf("[list_create_test: ");
-        printGreen("PASSED");
-        printf("]\n");
-    } else {
-        printf("[list_create_test: ");
-        printRed("FAILED");
-        printf("]\n");
-        exit(-1);
-    }
-}
-
-void list_append_test()
-{
-    list* l = list_create();
-    int x = 1;
-    
-    list_append(l, &x);
-
-    if(l->head != NULL) {
-       printf("[list_append_test1: "); 
-       printGreen("PASSED");
-       printf("]\n");
-    } else {
-        printf("[list_append_test1: ");
-        printRed("FAILED");
-        printf("]\n");
-        exit(-1);
-    }
-
-    free(l->head);
-    free(l);
-}
-
-void list_remove_first_test()
-{
-    list* l = list_create();
-    int x = 0;
-
-    list_append(l, &x);
-    list_remove_first(l);
-
-    if(l->head == NULL) {
-        printf("[list_remove_first_test1: "); 
-        printGreen("PASSED");
-        printf("]\n");
-    } else {
-        printf("[list_remove_first_test1: ");
-        printRed("FAILED");
-        printf("]\n");
-        exit(-1);
-    }
-}
-
-void printGreen(char* msg)
-{
-    printf("\x1b[1m\x1b[32m%s\x1b[0m", msg);
-}
-
-void printRed(char* msg)
-{
-    printf("\x1b[1m\x1b[31m%s\x1b[0m", msg);
 }
