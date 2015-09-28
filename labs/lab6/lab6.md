@@ -104,6 +104,32 @@ typedef struct iterator_t {
 The iterator for our list will be represented by a basic structure that pairs an instance
 of our linked list, `l`, and a `current` node pointer.
 
+
+### Iterator functions
+
+```c
+/** Returns a new iterator and initializes it. */
+iterator* iter_create(list* l);
+
+/** advances the iterator by a single node. */
+void iter_advance(iterator* iter);
+
+/** advances the iterator by a single node and returns the data of the node associated before it was advanced */
+void* iter_next(iterator* iter);
+
+/** advances the iterator back by a single node and returns the data of the node associated before it was moved back */
+void* iter_prev(iterator* iter);
+
+/** returns 0 if iter's current pointer is NULL, 1 otherwise. */
+int iter_at_end(iterator* iter);
+
+/** returns the current node */
+node* iter_get(iterator* iter);
+
+/** removes a node from a nom-empty list.
+void iter_remove(iterator* iter);
+```
+
 ### Testing
 
 After you get to a point where you've implemented several functions for your linked list,
