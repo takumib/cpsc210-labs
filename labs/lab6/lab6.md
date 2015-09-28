@@ -29,8 +29,8 @@ tar xvzf lab6.tar.gz
 
 This lab is separated into two broad tasks: for the first you'll need to implement 
 the doubly linked list defined in `list.h`, after this, you'll implement an iterator for 
-said list, capable of accessing, removing, and traversing (both forwards and
-backwards) over the elements.
+said list defined in `iterator.h`, capable of accessing, removing, and traversing 
+(both forwards and backwards) over the elements.
 
 ## Task #1: implement a doubly linked list
 
