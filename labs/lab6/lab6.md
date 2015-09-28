@@ -126,7 +126,7 @@ int iter_at_end(iterator* iter);
 /** returns the current node */
 node* iter_get(iterator* iter);
 
-/** removes a node from a nom-empty list. */
+/** removes the current node in the iterator from a nom-empty list. */
 void iter_remove(iterator* iter);
 ```
 
