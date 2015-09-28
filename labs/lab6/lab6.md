@@ -30,7 +30,8 @@ tar xvzf lab6.tar.gz
 This lab is separated into two broad tasks: for the first you'll need to implement 
 the doubly linked list defined in `list.h`, after this, you'll implement an iterator for 
 said list defined in `iterator.h`, capable of accessing, removing, and traversing 
-(both forwards and backwards) over the elements.
+(both forwards and backwards) over the elements. All of your work will be done in either
+`list.c` or `iterator.c`. All testing code will be provided.
 
 ## Task #1: implement a doubly linked list
 
