@@ -135,7 +135,7 @@ void iter_remove(iterator* iter);
 When using malloc remember the following syntax:
 
 ```c
- /** replace list with the type that you are actually trying to malloc.
+ /** replace list with the type that you are actually trying to malloc.*/
  list* l = (list*)malloc(sizeof(list));
 ```
 
@@ -145,9 +145,10 @@ When using `free()`, you will only need to call this in your remove functions in
 ```c
 node* n = (node*)malloc(sizeof(node));
 .
+. /** These will be in separate functions. */
 .
-.
-free(n)
+free(n);
+n = NULL;
 ```
 
 Note that we do not try to dereference the pointer. When we use free we simply pass the variable name to free.
