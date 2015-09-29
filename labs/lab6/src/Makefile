@@ -11,7 +11,7 @@ run:
 	./lab6
 
 test:
-	./lab6_test
+	-@./lab6_test || true
 
 clean:
 	rm -f *.o lab6 lab6_test *.tar *.tar.gz
