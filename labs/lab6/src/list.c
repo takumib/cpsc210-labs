@@ -27,17 +27,17 @@ void list_append(list* l, void* item)
 }
 
 /*
- * function: list_remove_last(list*)
- * description:
- */
-void list_remove_last(list* l)
-{
-}
-
-/*
  * function: list_remove_first(list*)
  * description:
  */
 void list_remove_first(list* l)
+{
+}
+
+/*
+ * function: list_remove_last(list*)
+ * description:
+ */
+void list_remove_last(list* l)
 {
 }

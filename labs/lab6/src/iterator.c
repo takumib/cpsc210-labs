@@ -27,6 +27,16 @@ void iter_advance(iterator* iter)
 }
 
 /*
+ * function: iter_get(iterator*)
+ * description:
+ * return: the current node.
+ */
+node* iter_get(iterator* iter)
+{
+    return NULL;
+}
+
+/*
  * function: iter_next(iterator*)
  * description:
  * return: the current node's data before advancing the list.
@@ -54,16 +64,6 @@ void* iter_prev(iterator* iter)
 int iter_at_end(iterator* iter)
 {
     return 0;
-}
-
-/*
- * function: iter_get(iterator*)
- * description:
- * return: the current node.
- */
-node* iter_get(iterator* iter)
-{
-    return NULL;
 }
 
 /*
