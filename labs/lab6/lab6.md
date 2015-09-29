@@ -191,5 +191,5 @@ When you're finished, and you are confident your work is *adequately commented* 
 ```
 make handin
 ```
-and submit the resulting `lab6_handin.tar` to the appropriate bucket on 
+and submit the resulting `lab6_handin.tar.gz` to the appropriate bucket on 
 [handin](https://handin.cs.clemson.edu/courses/).
