@@ -49,7 +49,7 @@ void* iter_prev(iterator* iter)
 /*
  * function: iter_at_end(iterator*)
  * description:
- * return: 0 if iterator's current is NULL, 1 otherwise.
+ * return: 1 if iterator's current is NULL, 0 otherwise.
  */
 int iter_at_end(iterator* iter)
 {
