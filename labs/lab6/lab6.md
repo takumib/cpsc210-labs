@@ -15,15 +15,7 @@ also write for this lab.
 
 As always, you can either download your complete lab 6 starter kit on the 
 [releases page](https://github.com/Welchd1/cpsc210-labs/releases) or peruse the default starter files [here]
-(https://github.com/Welchd1/cpsc210-labs/tree/master/labs/lab6/src) on GitHub
-
-## Using Tar
-
-Remember when decompressing type:
-
-```
-tar xvzf lab6.tar.gz
-```
+(https://github.com/Welchd1/cpsc210-labs/tree/master/labs/lab6/src) on GitHub. (here's the command for decompressing the tar file: `tar xvzf lab6.tar.gz`)
 
 ## Tasks 
 
@@ -130,7 +122,7 @@ node* iter_get(iterator* iter);
 void iter_remove(iterator* iter);
 ```
 
-### A Note about using `malloc()` and `free()`
+### A note about using `malloc()` and `free()`
 
 When using malloc remember the following syntax:
 
@@ -177,8 +169,8 @@ The output should look similar to the figure shown below:
 ### Hints
 
 * Some of the functions you will implement can be copied from last week such as creating your list and nodes.
-* All of your iterator functions should use just the iterator's current pointer except the iter_remove function which also uses   the list.
-* In your list_at_end function, you do not need to return an actual 0, or 1, you can simply return iter->current == NULL. This   will return the correct result on its own.
+* All of your iterator functions should use just the iterator's current pointer except the `iter_remove()` function which also uses the list.
+* In your `list_at_end()` function, you do not need to return an actual `0`, or `1`, you can simply return `iter->current == null`. This   will return the correct result on its own.
 * Whenever you change modify the list inside `list.c` or `iterator.c`, make sure that you think about what your previous and     next pointers should point to, as well as if head and tail should change.
 * Think about the corner cases: am I at the end of the list or beginning of the list? Is there only a single item in the list?
 * When you use `free()`, also set anything pointing to the thing that you free'd to `NULL`.
