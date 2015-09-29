@@ -120,7 +120,7 @@ void* iter_next(iterator* iter);
 /** advances the iterator back by a single node and returns the data of the node associated before it was moved back */
 void* iter_prev(iterator* iter);
 
-/** returns 0 if iter's current pointer is NULL, 1 otherwise. */
+/** returns 1 if iter's current pointer is NULL, 0 otherwise. */
 int iter_at_end(iterator* iter);
 
 /** returns the current node */
