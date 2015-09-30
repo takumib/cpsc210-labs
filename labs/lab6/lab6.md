@@ -14,7 +14,7 @@ experience in writing increasingly complex functions, such as `remove()` that yo
 also write for this lab.
 
 As always, you can either download your complete lab 6 starter kit on the 
-[releases page](https://github.com/Welchd1/cpsc210-labs/releases) or peruse the default starter files [here]
+[releases page](https://github.com/Welchd1/cpsc210-labs/releases/download/6.0/lab6.tar.gz) or peruse the default starter files [here]
 (https://github.com/Welchd1/cpsc210-labs/tree/master/labs/lab6/src) on GitHub. (here's the command for decompressing the tar file: `tar xvzf lab6.tar.gz`)
 
 ## Tasks 
