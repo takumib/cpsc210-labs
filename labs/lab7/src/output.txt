@@ -39,3 +39,6 @@ The transpose of M3 is:
 42.000 96.000 150.000 
 
 18.000 51.000 84.000 
+
+Is matrix M3 symmetric? ... naw
+Is matrix M4 symmetric? ... yes

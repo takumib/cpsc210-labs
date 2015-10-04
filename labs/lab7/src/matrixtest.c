@@ -20,11 +20,15 @@ int main() {
 	
 	matrix_sum(M1, M2, M3);
 	matrix_print("The sum of M1 and M2 is:\n", M3); 
-				  
-	matrix_scale(M1, M3, 5);  
-	matrix_print("The result of scaling M1 by 5 is:\n", M3);
+		
+	double M1_orig[3][3];
+	matrix_copy(M1, M1_orig);	//copy M1 to M1_orig
+		 
+	matrix_scale(M1, 5);  		//mutate M1 by scaling by 5
+	matrix_print("The result of scaling M1 by 5 is:\n", M1);
 
-	matrix_scale(M1, M3, 5);  
+	matrix_copy(M1, M3);      	//copy scaled M1 to M3
+	matrix_copy(M1_orig, M1);	//restore M1 to its pre-scaled state
 
 	matrix_difference(M1, M2, M3);
 	matrix_print("The difference between M1 and M2 is:\n", M3);
