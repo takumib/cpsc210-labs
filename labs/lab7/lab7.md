@@ -10,7 +10,7 @@ with non-square matrices (3x4, 2x1, etc).
 As always, if you're hazy on the mathematical notion of a matrix, go ahead and read up 
 on them [here]().
 
-## Tasks: implement 3x3 matrix operations
+## Task: implement 3x3 matrix operations
 
 We'll represent our matrices with 3x3, 2d arrays of type `double`. Here are signatures
 for *some* the operations you're expected to implement; the rest are defined in 
@@ -51,12 +51,13 @@ int matrix_is_symmetric(double m[3][3]);
 
 ## Testing
 
-To run your program, type `make`. This will compile the code and generate an 
-executable automatically. To run, all you need to do now is type `./lab7`. Also,
+To compile your code, type `make`. This will build the code gen an executable for it 
+automatically. Then to run, all you need to do now is type `./lab7`. Also,
 remember that you can freshen your working directory -- deleting any lingering
 `*.o` files -- by typing `make clean`.
 
-The expected output, can be found in [`output.txt`]().
+The expected output can be viewed in [`output.txt`]
+(https://github.com/Welchd1/cpsc210-labs/blob/lab7-dev/labs/lab7/src/output.txt).
 
 ## Handin
 
