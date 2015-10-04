@@ -70,3 +70,9 @@ tar cvf lab7_handin.tar matrix.h matrix.c matrixtest.c output.txt MakeFile
 
 and submit the resulting `lab7_handin.tar.gz` to the appropriate bucket on 
 [handin](https://handin.cs.clemson.edu/courses/).
+
+## Downloading
+
+As usual you can either browse the default files here on [GitHub]
+(https://github.com/Welchd1/cpsc210-labs/tree/lab7-dev/labs/lab7/src) or download the 
+starter kit [here]().
