@@ -44,10 +44,10 @@ int main() {
    	matrix_print("The transpose of M3 is:\n", M3);
    	
    	int is_symmetric = matrix_is_symmetric(M3);
-   	printf("Is matrix M3 symmetric? ... %s\n", is_symmetric == 0 ? "yes" : "naw" );
+   	printf("Is matrix M3 symmetric? ... %s\n", is_symmetric == 1 ? "yes" : "naw" );
    	
    	is_symmetric = matrix_is_symmetric(M4);
-   	printf("Is matrix M4 symmetric? ... %s\n", is_symmetric == 0 ? "yes" : "naw" );
+   	printf("Is matrix M4 symmetric? ... %s\n", is_symmetric == 1 ? "yes" : "naw" );
 
    	return 0;
 }
