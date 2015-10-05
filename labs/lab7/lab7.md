@@ -8,7 +8,7 @@ should help eliminate some of the edge cases and complexity that arise in needin
 with non-square matrices (3x4, 2x1, etc).
 
 As always, if you're hazy on the mathematical notion of a matrix, go ahead and read up 
-on them [here]().
+on them [here](https://github.com/Welchd1/cpsc210-labs/blob/lab7-dev/labs/lab7/matrices.pdf).
 
 ## Task: implement 3x3 matrix operations
 
