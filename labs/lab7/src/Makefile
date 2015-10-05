@@ -2,7 +2,7 @@
 
 OBJS = matrixtest.o matrix.o
 
-CFLAGS = -g -Wall
+CFLAGS = -g -Wall -std=c99
 
 lab7: ${OBJS}
 	@echo
@@ -12,4 +12,4 @@ lab7: ${OBJS}
 ${OBJS}: matrix.h Makefile
 
 clean:
-	rm -f *.o *.gch lab7
+	rm -f *.o *.gch lab7 *.tar *.tar.gz

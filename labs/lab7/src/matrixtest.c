@@ -1,3 +1,7 @@
+/*
+ * File: matrixtest.c
+ * Description: main program and matrix test driver.
+ */
 #include "matrix.h"
 
 int main() {
