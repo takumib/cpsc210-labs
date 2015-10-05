@@ -1,6 +1,8 @@
 \documentclass[12pt]{article}
 \usepackage{amsmath}
 \usepackage{mathtools}
+\usepackage{xcolor}
+\usepackage{amssymb}
 
 \begin{document}
 
@@ -147,4 +149,41 @@ $M * s=
  \end{bmatrix}
 $
 \end{center}
+
+\section{Matrix Transposition}
+
+Matrix transposition is a unary operation that requires only a single matrix. For a matrix $M$, a matrix transposition denoted as $M^T$, replaces an arbitrary element $a_{i, j}$ with element $a_{j, i}$. For example let's use the following matrix:
+\begin{center}
+$M = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}$
+\end{center}
+If we apply the transpose operation on $M$, we get:
+\begin{center}
+$M^T = \begin{bmatrix} 1 & 4 & 7 \\ 2 & 5 & 8 \\ 3 & 6 & 9 \end{bmatrix}$
+\end{center}
+So, a general matrix transpose operation would look like this:
+\begin{center}
+$M = 
+ \begin{bmatrix} a_{0, 0} & a_{0, 1} & a_{0, 2} \\
+ 		         a_{1, 0} & a_{1, 1} & a_{1, 2} \\
+		         a_{2, 0} & a_{2, 1} & a_{2, 2}
+ \end{bmatrix},
+ M^T = 
+  \begin{bmatrix} a_{0, 0} & a_{1, 0} & a_{2, 0} \\
+ 		          a_{0, 1} & a_{1, 1} & a_{2, 1} \\
+		          a_{0, 2} & a_{1, 2} & a_{2, 2}
+ \end{bmatrix}
+$
+\end{center}
+
+\section{Matrix Symmetry}
+Matrix symmetry is a property of a square matrix. If a matrix is symmetric, this means that a matrix $M = M^T$.
+For example:
+\begin{center}
+$M = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}$
+\end{center}
+is not symmetric. If we take $M^T$, it does not equal $M$.
+\begin{center}
+$M' = \begin{bmatrix} \color{red} 1 & 4 & 7 \\ 4 & \color{red}5 & 6 \\ 7 & 6 & \color{red}9 \end{bmatrix}$
+\end{center}
+However, matrix $M'$ is symmetric. Note that the elements on either side of the diagonal for matrix $M'$ are the same on both sides.
 \end{document}
