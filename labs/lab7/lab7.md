@@ -34,7 +34,7 @@ void matrix_difference(double m1[3][3], double m2[3][3], double result[3][3]);
  *  
  * Note that this is *not* simply multiplying each element in m1 by each in m2! 
  * It's more like taking the dot product between each row of m1 and column of 
- * m2. Read up on it [here](https://github.com/Welchd1/cpsc210-labs/blob/lab7-dev/labs/lab7/matrices.pdf).
+ * m2. Read up on it https://github.com/Welchd1/cpsc210-labs/blob/lab7-dev/labs/lab7/matrices.pdf.
  */
 void matrix_multiply(double m1[3][3], double m2[3][3], double result[3][3]);
 
@@ -45,7 +45,7 @@ void matrix_scale(double m[3][3], double scale);
 
 /*
  * Computes and replaces m with its transpose. You can read up on transpose 
- * operation [here](https://github.com/Welchd1/cpsc210-labs/blob/lab7-dev/labs/lab7/matrices.pdf).
+ * operation https://github.com/Welchd1/cpsc210-labs/blob/lab7-dev/labs/lab7/matrices.pdf.
  * Note that this operation *replaces* the incoming m.
  */
 void matrix_transpose(double m[3][3]);
