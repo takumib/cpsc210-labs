@@ -185,7 +185,7 @@ int main() {
 
 As usual you can either browse the default files here on [GitHub]
 (https://github.com/Welchd1/cpsc210-labs/tree/lab7-dev/labs/lab7/src) or download the 
-starter kit [here]().
+starter kit [here](https://github.com/Welchd1/cpsc210-labs/releases/download/7.0/lab7.tar.gz).
 
 After you have downloaded `lab7.tar.gz` you can decompress this by typing:
 
