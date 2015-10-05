@@ -156,6 +156,7 @@ You will be grading using the following criteria:
 * Handing in correct materials
   * matrix.c, matrix.h, matrixtest.c, Makefile, and output.txt inside lab7_handin.tar.gz (Note: use command from above)
 * On-time submission
+* Lab attendance
 
 As always, partial submission are always accepted and will give you at least a 50%. Generally, the grade will be much higher unless the program contains too many errors.
 
