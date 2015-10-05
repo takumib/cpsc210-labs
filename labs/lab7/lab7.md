@@ -17,7 +17,7 @@ Finally, after reading **all** sections, download the lab with the link at the b
 
 ## Task: implement 3x3 matrix operations
 
-We'll represent our matrices with 3x3, 2d arrays of type `double`. Here are signatures
+We'll represent our matrices with 3x3, 2D arrays of type `double`. Here are signatures
 for *some* of the operations you're expected to implement; the rest are defined in 
 `matrix.h`.
 
@@ -34,7 +34,7 @@ void matrix_difference(double m1[3][3], double m2[3][3], double result[3][3]);
  *  
  * Note that this is *not* simply multiplying each element in m1 by each in m2! 
  * It's more like taking the dot product between each row of m1 and column of 
- * m2. Read up on it [here](https://github.com/Welchd1/cpsc210-labs/blob/lab7-dev/labs/lab7/matrices.pdf).
+ * m2. Read up on it https://github.com/Welchd1/cpsc210-labs/blob/lab7-dev/labs/lab7/matrices.pdf.
  */
 void matrix_multiply(double m1[3][3], double m2[3][3], double result[3][3]);
 
@@ -45,7 +45,7 @@ void matrix_scale(double m[3][3], double scale);
 
 /*
  * Computes and replaces m with its transpose. You can read up on transpose 
- * operation [here](https://github.com/Welchd1/cpsc210-labs/blob/lab7-dev/labs/lab7/matrices.pdf).
+ * operation https://github.com/Welchd1/cpsc210-labs/blob/lab7-dev/labs/lab7/matrices.pdf.
  * Note that this operation *replaces* the incoming m.
  */
 void matrix_transpose(double m[3][3]);
@@ -156,6 +156,7 @@ You will be grading using the following criteria:
 * Handing in correct materials
   * matrix.c, matrix.h, matrixtest.c, Makefile, and output.txt inside lab7_handin.tar.gz (Note: use command from above)
 * On-time submission
+* Lab attendance
 
 As always, partial submission are always accepted and will give you at least a 50%. Generally, the grade will be much higher unless the program contains too many errors.
 
