@@ -17,7 +17,7 @@ Finally, after reading **all** sections, download the lab with the link at the b
 
 ## Task: implement 3x3 matrix operations
 
-We'll represent our matrices with 3x3, 2d arrays of type `double`. Here are signatures
+We'll represent our matrices with 3x3, 2D arrays of type `double`. Here are signatures
 for *some* of the operations you're expected to implement; the rest are defined in 
 `matrix.h`.
 
