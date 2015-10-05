@@ -76,7 +76,7 @@ double m[3][3] = {
                  };
 ```
 
-Take note of the above creation of a 2D ```c double ``` array. We can imagine the 2D array as an array of 1D arrays. To access 1 particular element from ```c m ``` after we have created it, we must write valid indices for accessing ```c m ```. We denote the particular row and column that we wish to receive by writing ```c m[i][j] ``` where ```c i ``` denotes the row and ```c j ``` denotes the column starting at index 0. So, ```c m[0][0] ``` accesses the top left element and ```c m[2][2] ``` accesses the bottom right element. We can also set an element in ```c m ``` by using the assignment operator ```c = ``` like this ```c m[1][1] = 0 ```. This sets the middle element in the matrix to 0. In order to access or set each element in a matrix we will use doubly and triply nested for-loops as discussed in the next section. For specific matrix operation help, please use [introduction to matrices](https://github.com/Welchd1/cpsc210-labs/blob/lab7-dev/labs/lab7/matrices.pdf).
+Take note of the above creation of a 2D `double` array. We can imagine the 2D array as an array of 1D arrays. To access 1 particular element from `m` after we have created it, we must write valid indices for accessing `m `. We denote the particular row and column that we wish to receive by writing `m[i][j]` where `i` denotes the row and `j` denotes the column starting at index 0. So, `m[0][0]` accesses the top left element and `m[2][2]` accesses the bottom right element. We can also set an element in `m` by using the assignment operator `=` like this `m[1][1] = 0`. This sets the middle element in the matrix to 0. In order to access or set each element in a matrix we will use doubly and triply nested for-loops as discussed in the next section. For specific matrix operation help, please use [introduction to matrices](https://github.com/Welchd1/cpsc210-labs/blob/lab7-dev/labs/lab7/matrices.pdf).
 
 ## Using a doubly or triply nested for-loop
 
@@ -89,9 +89,9 @@ for(int i = 0; i < 3; i++) {
   }
 }
 ```
-In the code above, we create a doubly nested for-loop. When access a 2D array using this method, we use the outer loop to denote the row we want to access. The inner loop we use to access the column of interest. Thus, we use the notation ```c result[i][j] ``` to set the ith row and jth column of a matrix result.
+In the code above, we create a doubly nested for-loop. When access a 2D array using this method, we use the outer loop to denote the row we want to access. The inner loop we use to access the column of interest. Thus, we use the notation `result[i][j]` to set the ith row and jth column of a matrix result.
 
-We may need to go a step further and use a triply nested for-loop like in ```c matrix_multiply ``` to access a row from ```c m1 ``` and a column from ```c m2 ```. Do do this we write the loop as follows:
+We may need to go a step further and use a triply nested for-loop like in `matrix_multiply()` to access a row from `m1` and a column from `m2`. Do do this we write the loop as follows:
 
 ```c
 for(int i = 0; i < 3; i++) {
@@ -153,7 +153,6 @@ As always, partial submission are always accepted and will give you at least a 5
 ## Indentation Example
 
 ```c
-
 #include <stdio.h>
 
 int main() {
