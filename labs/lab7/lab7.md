@@ -10,7 +10,8 @@ with non-square matrices (3x4, 2x1, etc).
 As always, if you're hazy on the mathematical notion of a matrix, go ahead and read up 
 on them [here](https://github.com/Welchd1/cpsc210-labs/blob/lab7-dev/labs/lab7/matrices.pdf).
 
-**Note:** Please read through all instructions carefully. You are responsible for handing in all material on time and correctly as well as following grading criteria below.
+**Note:** Please read through all instructions carefully. You are responsible for handing 
+in all material on time and correctly as well as following grading criteria below.
 
 Finally, after reading **all** sections, download the lab with the link at the bottom.
 
@@ -27,7 +28,7 @@ for *some* the operations you're expected to implement; the rest are defined in
  */
 void matrix_difference(double m1[3][3], double m2[3][3], double result[3][3]);
 
-/** 
+/*
  * Given matrices m1 and m2, computes m1m2 and puts the resulting matrix into 
  * result. 
  *  
@@ -37,11 +38,8 @@ void matrix_difference(double m1[3][3], double m2[3][3], double result[3][3]);
  */
 void matrix_multiply(double m1[3][3], double m2[3][3], double result[3][3]);
 
-/* 
- * Scales all elements of matrix m1 by 'scale' and places the resulting 
- * matrix into result.
- */
-void matrix_scale(double m1[3][3], double result[3][3], double scale);
+/* Modifies matrix m by multiplying all of its elements by 'scale' */
+void matrix_scale(double m[3][3], double scale);
 
 /*
  * Computes and replaces m with its transpose. You can read up on transpose 
