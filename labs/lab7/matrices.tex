@@ -1,0 +1,150 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{mathtools}
+
+\begin{document}
+
+\begin{center}
+\normalsize{CPSC 2101: Programming Methodology Lab} \\
+\vspace{.2cm}
+\large{A Brief Introduction to Matrix Operations} \\
+\end{center}
+
+\section{What is a Matrix?}
+A matrix is an array representation of data grouped in rows and columns. We can write a matrix as follows:
+\[
+M =
+	\begin{bmatrix} 
+		1 & 2 & 3 \\
+		4 & 5 & 6 \\
+		7 & 8 & 9
+	\end{bmatrix}
+\]
+To refer to an element $a$ in matrix $M$ we denote it by row $i$, and column $j$, where $0 \leq i \leq 2$ and $0 \leq j \leq 2$. For example, $a_{0,0} = 1$ and $a_{2,2} = 9$. Next, we will discuss various operations that can be performed on a matrix.
+
+\section{Matrix Operations}
+
+There are several matrix operations that we will look at. Specifically we will discuss matrix addition, subtraction, multiply and transpose.
+
+\subsection{Matrix Addition}
+
+Matrix addition is a matrix x matrix operation meaning that it requires two matrices.
+\begin{center}
+$M = \begin{bmatrix} 5 & 2 & 1 \\ 4 & 2 & 4 \\ 1 & 3 & 1 \end{bmatrix}
+  N = \begin{bmatrix} 3 & 1 & 6 \\ 5 & 2 & 2 \\ 4 & 3 & 3 \end{bmatrix}
+$
+\end{center}
+\begin{center}
+$M + N =
+ \begin{bmatrix} 5 & 2 & 1 \\ 4 & 2 & 4 \\ 1 & 3 & 1 \end{bmatrix}  +
+  \begin{bmatrix} 3 & 1 & 6 \\  5 & 2 & 2 \\ 4 & 3 & 3 \end{bmatrix} = 
+  \begin{bmatrix} 5 + 3 & 2 + 1 & 1 + 6 \\ 4 + 5 & 2 + 2 & 4 + 2 \\ 1 + 4 & 3 + 3 & 1 + 3 \end{bmatrix} =
+  \begin{bmatrix} 8 & 3 & 7 \\ 9 & 4 & 6 \\ 5 & 6 & 4 \end{bmatrix}
+$
+\end{center}
+Note the two matrices above. $M + N$ is the sum from an element $a$ in $M$ and $b$ in $N$. So, for each $i, j$ in the result matrix is $a_{i,j} + b_{i,j}$ or:
+
+\begin{center}
+$M + N =
+ \begin{bmatrix} a_{0, 0} + b_{0, 0} & a_{0, 1} + b_{0, 1} & a_{0, 2} + b_{0, 2} \\
+ 		         a_{1, 0} + b_{1, 0} & a_{1, 1} + b_{1, 1} & a_{1, 2} + b_{1, 2} \\
+		         a_{2, 0} + b_{2, 0} & a_{2, 1} + b_{2, 1} & a_{2, 2} + b_{2, 2}
+ \end{bmatrix}
+$
+\end{center}
+
+\subsection{Matrix Subtraction}
+
+Matrix subtraction is very similar to matrix addition. We simply perform a subtraction operation on each element instead of addition.
+\begin{center}
+$M = \begin{bmatrix} 5 & 2 & 1 \\ 4 & 2 & 4 \\ 1 & 3 & 1 \end{bmatrix}
+  N = \begin{bmatrix} 3 & 1 & 6 \\ 5 & 2 & 2 \\ 4 & 3 & 3 \end{bmatrix}
+$
+\end{center}
+\begin{center}
+$M - N =
+ \begin{bmatrix} 5 & 2 & 1 \\ 4 & 2 & 4 \\ 1 & 3 & 1 \end{bmatrix}  -
+  \begin{bmatrix} 3 & 1 & 6 \\  5 & 2 & 2 \\ 4 & 3 & 3 \end{bmatrix} = 
+  \begin{bmatrix} 5 - 3 & 2 - 1 & 1 - 6 \\ 4 - 5 & 2 - 2 & 4 - 2 \\ 1 - 4 & 3 - 3 & 1 - 3 \end{bmatrix} =
+  \begin{bmatrix} 2 & 1 & -5 \\ -1 & 0 & 2 \\ -3 & 0 & -2 \end{bmatrix}
+$
+\end{center}
+The corresponding matrix operations that are performed can be seen below:
+\begin{center}
+$M + N =
+ \begin{bmatrix} a_{0, 0} - b_{0, 0} & a_{0, 1} - b_{0, 1} & a_{0, 2} - b_{0, 2} \\
+ 		         a_{1, 0} - b_{1, 0} & a_{1, 1} - b_{1, 1} & a_{1, 2} - b_{1, 2} \\
+		         a_{2, 0} - b_{2, 0} & a_{2, 1} - b_{2, 1} & a_{2, 2} - b_{2, 2}
+ \end{bmatrix}
+$
+\end{center}
+
+\subsection{Matrix Multiplication}
+
+Matrix multiplication is different from matrix addition and subtraction in that we do not simply multiply each element in a matrix $M$ by each element in matrix $N$. We can write matrix multiplication for a single element as:
+
+$$(M N)_{i, j} = \sum_{k = 1}^{n} M_{i, k}N_{k, j}$$
+
+If we look at the examples we have been using we get the resulting matrix:
+ \begin{center}
+$M = \begin{bmatrix} 5 & 2 & 1 \\ 4 & 2 & 4 \\ 1 & 3 & 1 \end{bmatrix}
+  N = \begin{bmatrix} 3 & 1 & 6 \\ 5 & 2 & 2 \\ 4 & 3 & 3 \end{bmatrix}
+$
+\end{center}
+\begin{center}
+$M * N =
+ \begin{bmatrix} 5 & 2 & 1 \\ 4 & 2 & 4 \\ 1 & 3 & 1 \end{bmatrix}  *
+  \begin{bmatrix} 3 & 1 & 6 \\  5 & 2 & 2 \\ 4 & 3 & 3 \end{bmatrix} = 
+  \begin{bmatrix} (5*3) + (2*5) + (1*4) & (5*1) + (2*2) + (1*3) & (5*6) + (2*2) + (1*3) \\ 
+                           (4*3) + (2*5) + (4*4) & (4*1) + (2*2) + (4*3) & (4*6) + (2*2) + (4*3) \\ 
+                           (1*3) + (3*5) + (1*4) & (1*1) + (3*2) + (1*3) & (1*6) + (3*2) + (1*3) 
+  \end{bmatrix} =
+  \begin{bmatrix} 9 & 12 & 37 \\ 38 & 20 & 40 \\ 22 & 10 & 15 \end{bmatrix}
+$
+\end{center}
+We can write the matrix as follows:
+\begin{center}
+$
+\begin{bsmallmatrix} 
+		         (a_{0, 0} * b_{0, 0}) + (a_{0, 1} * b_{1, 0}) + (a_{0, 2} * b_{2, 0}) & 
+                          (a_{0, 0} * b_{0, 1}) + (a_{0, 1} * b_{1, 1}) + (a_{0, 2} * b_{2, 1}) & 
+                          (a_{0, 0} * b_{0, 2}) + (a_{0, 1} * b_{1, 2}) + (a_{0, 2} * b_{2, 2}) \\
+                          (a_{1, 0} * b_{0, 0}) + (a_{1, 1} * b_{1, 0}) + (a_{1, 2} * b_{2, 0}) & 
+                          (a_{1, 0} * b_{0, 1}) + (a_{1, 1} * b_{1, 1}) + (a_{1, 2} * b_{2, 1}) & 
+                          (a_{1, 0} * b_{0, 2}) + (a_{1, 1} * b_{1, 2}) + (a_{1, 2} * b_{2, 2}) \\
+                          (a_{2, 0} * b_{0, 0}) + (a_{2, 1} * b_{1, 0}) + (a_{2, 2} * b_{2, 0}) & 
+                          (a_{2, 0} * b_{0, 1}) + (a_{2, 1} * b_{1, 1}) + (a_{2, 2} * b_{2, 1}) & 
+                          (a_{2, 0} * b_{0, 2}) + (a_{2, 1} * b_{1, 2}) + (a_{2, 2} * b_{2, 2}) \\
+ \end{bsmallmatrix}
+$
+\end{center}
+
+\subsection{Matrix Scale}
+
+The final operation we will discuss is matrix scaling. In matrix scaling, we multiply a matrix by a single scalar value.
+\begin{center}
+$M = \begin{bmatrix} 5 & 2 & 1 \\ 4 & 2 & 4 \\ 1 & 3 & 1 \end{bmatrix}
+  s = 2
+$
+\end{center}
+\begin{center}
+$M * s =
+ \begin{bmatrix} 5 & 2 & 1 \\ 4 & 2 & 4 \\ 1 & 3 & 1 \end{bmatrix}  *
+  2 = 
+  \begin{bmatrix} 5 * 2 & 2 * 2 & 1 * 2 \\ 
+                           4 * 2 & 2 * 2 & 4 * 2 \\ 
+                           1 * 2 & 3 * 2 & 1 * 2
+  \end{bmatrix} =
+  \begin{bmatrix} 10 & 4 & 2 \\ 8 & 4 & 8 \\ 2 & 6 & 2 \end{bmatrix}
+$
+\end{center}
+We write this matrix as follows:
+\begin{center}
+$M * s=
+ \begin{bmatrix} a_{0, 0} * s & a_{0, 1} * s & a_{0, 2} * s \\
+ 		         a_{1, 0} * s & a_{1, 1} * s & a_{1, 2} * s \\
+		         a_{2, 0} * s & a_{2, 1} * s & a_{2, 2} * s
+ \end{bmatrix}
+$
+\end{center}
+\end{document}
