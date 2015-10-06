@@ -131,7 +131,7 @@ When you're finished, and you are confident your work is *adequately commented* 
 tar cvf lab7_handin.tar matrix.h matrix.c matrixtest.c output.txt Makefile
 ```
 
-and submit the resulting `lab7_handin.tar.gz` to the appropriate bucket on 
+and submit the resulting `lab7_handin.tar` to the appropriate bucket on 
 [handin](https://handin.cs.clemson.edu/courses/).
 
 ## Due Date
