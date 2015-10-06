@@ -8,7 +8,7 @@ should help eliminate some of the edge cases and complexity that arise in needin
 with non-square matrices (3x4, 2x1, etc).
 
 As always, if you're hazy on the mathematical notion of a matrix, go ahead and read up 
-on them [here](https://github.com/Welchd1/cpsc210-labs/blob/lab7-dev/labs/lab7/matrices.pdf).
+on them [here](https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab7/matrices.pdf).
 
 **Note:** Please read through all instructions carefully. You are responsible for handing 
 in all material on time and correctly as well as following grading criteria below.
@@ -34,7 +34,7 @@ void matrix_difference(double m1[3][3], double m2[3][3], double result[3][3]);
  *  
  * Note that this is *not* simply multiplying each element in m1 by each in m2! 
  * It's more like taking the dot product between each row of m1 and column of 
- * m2. Read up on it https://github.com/Welchd1/cpsc210-labs/blob/lab7-dev/labs/lab7/matrices.pdf.
+ * m2. Read up on it https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab7/matrices.pdf.
  */
 void matrix_multiply(double m1[3][3], double m2[3][3], double result[3][3]);
 
@@ -45,7 +45,7 @@ void matrix_scale(double m[3][3], double scale);
 
 /*
  * Computes and replaces m with its transpose. You can read up on transpose 
- * operation https://github.com/Welchd1/cpsc210-labs/blob/lab7-dev/labs/lab7/matrices.pdf.
+ * operation https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab7/matrices.pdf.
  * Note that this operation *replaces* the incoming m.
  */
 void matrix_transpose(double m[3][3]);
@@ -78,7 +78,7 @@ double m[3][3] = {
                  };
 ```
 
-Take note of the above creation of a 2D `double` array. We can imagine the 2D array as an array of 1D arrays. To access a particular element from `m` after we have created it, we must use valid indices for accessing `m `. We denote the particular row and column that we wish to receive by writing `m[i][j]` where `i` denotes the row and `j` denotes the column starting at index 0. So, `m[0][0]` accesses the top left element and `m[2][2]` accesses the bottom right element. We can also set an element in `m` by using the assignment operator `=` like this `m[1][1] = 0`. This sets the middle element in the matrix to 0. In order to access or set each element in a matrix we will use doubly and triply nested for-loops as discussed in the next section. For specific matrix operation help, please use [A Brief Introduction to Matrix Operations](https://github.com/Welchd1/cpsc210-labs/blob/lab7-dev/labs/lab7/matrices.pdf).
+Take note of the above creation of a 2D `double` array. We can imagine the 2D array as an array of 1D arrays. To access a particular element from `m` after we have created it, we must use valid indices for accessing `m `. We denote the particular row and column that we wish to receive by writing `m[i][j]` where `i` denotes the row and `j` denotes the column starting at index 0. So, `m[0][0]` accesses the top left element and `m[2][2]` accesses the bottom right element. We can also set an element in `m` by using the assignment operator `=` like this `m[1][1] = 0`. This sets the middle element in the matrix to 0. In order to access or set each element in a matrix we will use doubly and triply nested for-loops as discussed in the next section. For specific matrix operation help, please use [A Brief Introduction to Matrix Operations](https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab7/matrices.pdf).
 
 ## Using a doubly or triply nested for-loop
 
@@ -120,7 +120,7 @@ remember that you can freshen your working directory -- deleting any lingering
 `*.o` files -- by typing `make clean`.
 
 The expected output can be viewed in [`output.txt`]
-(https://github.com/Welchd1/cpsc210-labs/blob/lab7-dev/labs/lab7/src/output.txt).
+(https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab7/src/output.txt).
 
 ## Handin
 
