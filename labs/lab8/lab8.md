@@ -12,6 +12,10 @@ GDB (a dedicated debugging tool).
 This lab will be a guided one. This handout is merely intended to serve as 
 summary/reference. 
 
+**Note:** Since this lab is self guided, it will be very important for
+attendance. Please make sure that you are on time, and if not try to 
+catch up to where we are at with your neighbors.
+
 ### Part #1: writing a simple power function
 
 This program consists of two pieces: 
