@@ -9,7 +9,7 @@ debug your programs with a combination of print statements and conditional
 compilation. Lab will conclude with a brief tutorial/walkthrough on 
 GDB (a dedicated debugging tool). 
 
-This lab will be a guided one. This handout is merely intended to serve as a 
+This lab will be a guided one. This handout is merely intended to serve as 
 summary/reference. 
 
 ### Part #1: writing a simple power function
@@ -63,6 +63,7 @@ yourself by making sure execution is even reaching the brunt of your logic.
 
 #### Optional: condition compilation
 
+<<<<<<< HEAD
 The *C preprocesser* can also be used as a helpful debugging tool for switching
 on or off your debugging print statements. That is, rather simply erasing or 
 commenting out your debug statements when you're finished, you can simply 
@@ -90,4 +91,15 @@ makefile for the example that we have been working with.
 
 ### Part #5: introduction to debugging with GDB
 
+Using `printf()` statements and `#ifdef` blocks may not always be helpful
+or provide the information we want. We can use a different debug tool known 
+as The GNU Debugger, or GDB. We will use `gdb` with our given example to 
+step through our program.
+
 ### Part #6: the tar command
+
+The `tar` command is a UNIX command that we have been using to package our 
+programs. 
+
+In this section, we will discuss in more detail about the `tar` command and 
+what the flags and options that are available.
