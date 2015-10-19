@@ -30,11 +30,42 @@ that provide instructions for your C program at compile time.
 
 ### Part #3: debugging with print statements
 
-The C preprocessor can be more helpful than just for excluding certain 
-header files. We can also use the C preprocessor to debug our program by
-providing additional preprocessor commands inside of our program. We can use
-this for simple testing, but not recommended as a final solution for handin.
+A perfectly valid technique for figuring out what (or where) your program 
+is going wrong is by simply writing print statements in the code. This is 
+especially useful for:
 
+* Determining which 'path' execution went down. E.g.: which if-statement 
+branch was taken?
+
+```c
+if (x < 3) {
+	printf("GETS HERE: x must be < 3");
+}
+```
+
+* Examining values of variables at a given place. Eg.:
+
+```c
+int x = 3;
+...  // some other computation involving x
+if (x < 3) {
+	printf("GETS HERE: x must be < 3 specifically, x is: %d", x);
+}
+```
+This way if your program isn't giving the answer you expect, you can 
+'sanity check' yourself by making sure execution is even reaching the 
+brunt of your logic.
+
+#### Enhancement: condition compilation
+
+The C preprocesser can also be used as a helpful debugging tool for turning on 
+(or off) your debugging print statements. That is, rather simply erasing or 
+commenting out your debug statements when finished, you can simply wrap the call 
+
+The C preprocessor can be more helpful than just for excluding certain header 
+files. We can also use the C preprocessor to debug our program by providing additional 
+preprocessor commands inside of our program. We can use this for simple 
+testing, but not recommended as a final solution for handin.
 
 ### Part #4: compiling with make
 
