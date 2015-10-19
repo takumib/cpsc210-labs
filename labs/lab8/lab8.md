@@ -67,11 +67,10 @@ yourself by making sure execution is even reaching the brunt of your logic.
 
 #### Optional: condition compilation
 
-<<<<<<< HEAD
-The *C preprocesser* can also be used as a helpful debugging tool for switching
-on or off your debugging print statements. That is, rather simply erasing or 
-commenting out your debug statements when you're finished, you can simply 
-wrap whatever debug printing line(s) with the following 'special' 
+The *C preprocesser* can also be used as a helpful debugging tool for 
+switching on or off your debugging print statements. That is, rather simply 
+erasing or commenting out your debug statements when you're finished, you 
+can simply wrap whatever debug printing line(s) with the following 'special'
 preprocessor conditional:
 
 ```c
@@ -79,8 +78,8 @@ preprocessor conditional:
 	printf("my super important (but now uneeded) debug statement");
 #endif
 ```
-While this is indeed useful, it can be overkill for our small labs, so please use sparingly
-in the context of this lab's projects.
+While this is indeed useful, it can be overkill for our small labs, so 
+please use sparingly in the context of this lab's projects.
 
 ### Part #4: compiling with make
 
