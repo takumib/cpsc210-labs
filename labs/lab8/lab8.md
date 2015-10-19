@@ -41,6 +41,10 @@ branch was taken?
 if (x < 3) {
 	printf("GETS HERE: x must be < 3");
 }
+else {
+	printf("oh, looks like x is >= 3... so we do what's below instead");
+	...
+}
 ```
 
 * Examining values of variables at a given place. Eg.:
@@ -50,22 +54,28 @@ int x = 3;
 ...  // some other computation involving x
 if (x < 3) {
 	printf("GETS HERE: x must be < 3 specifically, x is: %d", x);
+	..
 }
 ```
-This way if your program isn't giving the answer you expect, you can 
-'sanity check' yourself by making sure execution is even reaching the 
-brunt of your logic.
+This way if the program isn't giving the answer it should (or at least 
+the answer you *think* it should), it's often useful to 'sanity check' 
+yourself by making sure execution is even reaching the brunt of your logic.
 
-#### Enhancement: condition compilation
+#### Optional: condition compilation
 
-The C preprocesser can also be used as a helpful debugging tool for turning on 
-(or off) your debugging print statements. That is, rather simply erasing or 
-commenting out your debug statements when finished, you can simply wrap the call 
+The *C preprocesser* can also be used as a helpful debugging tool for switching
+on or off your debugging print statements. That is, rather simply erasing or 
+commenting out your debug statements when you're finished, you can simply 
+wrap whatever debug printing line(s) with the following 'special' 
+preprocessor conditional:
 
-The C preprocessor can be more helpful than just for excluding certain header 
-files. We can also use the C preprocessor to debug our program by providing additional 
-preprocessor commands inside of our program. We can use this for simple 
-testing, but not recommended as a final solution for handin.
+```c
+#ifdef DEBUG
+	printf("my super important (but now uneeded) debug statement");
+#endif
+```
+While this is indeed useful, it can be overkill for our small labs, so please use sparingly
+in the context of this lab's projects.
 
 ### Part #4: compiling with make
 
