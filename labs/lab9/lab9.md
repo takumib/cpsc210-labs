@@ -30,13 +30,13 @@ The `Person` class is simply designed to be some representation
 ```c++
 //person.h
 
-class Person{
+class Person {
 public:
     Person(); 
-    Person(string, string, int, char);	
+    Person(string firstname, string lastname, int age, char gender);	
 
     string getFirstName();	
-	void setFirstName(string);
+	void setFirstName(string new_name);
 	...
 
     ~Person();
@@ -51,15 +51,29 @@ private:
 Specifically, we've defined a 
 `Person` as something having a `first_name`, `last_name`, `age`, and `gender`. These 
 member variables are defined in `person.h`, which, as usual for header files, also 
-declares prototypes for the various methods* the `Person` class supports.
+declares prototypes for the various *methods the `Person` class supports.
 
 |*aside: methods vs. functions|
 |-------------|
-| *A method is an operation that is associated with an object. As such, they are typically declared in the `.h` file for a class and can access any (even private) member variables for the class (`first_name`, `last_name`, `age`, etc). Since C inherently lacks objects, there is no notion of a 'method' and so everything should be referred to as a function.* |
-
-
+| *A method is distinguished as an operation that is associated with an object. As such, they are typically declared in the `.h` file for a class and can access any (even private) member variables for the class (`first_name`, `last_name`, `age`, etc). Since C inherently lacks objects, there can be no notion of a 'method' and so everything should be referred to as a function.* |
 
 ### "What makes a `Person` anyways?"
+
+To use a `Person` object, it must first be made (instantiated) via a class *constructor*. 
+In this case, there are actually two to choose from. The first is declared like this:
+```c++
+Person(string firstname, string lastname, int age, char gender)
+```
+meaning in order to 'make' a new `Person`, you must provide all necessary name, age,
+and gender information at the time of creation like this:
+
+```c++
+Person *p = new Person("lawrence", "welk", 102, 'M');
+```
+
+
+
+### Methods 
 
 ## Testing
 
