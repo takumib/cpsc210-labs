@@ -85,7 +85,7 @@ In this case, there are actually two to choose from.
 
 The first is declared like this in the header:
 ```c++
-Person(string firstname, string lastname, int age, char gender)
+Person(std::string, std::string, int, char)
 ```
 meaning in order to 'make' and use a `Person` in some client context, you must provide 
 all necessary name, age, and gender information at the time of creation like this:
