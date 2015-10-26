@@ -135,10 +135,10 @@ the class's data fields.
 For example:
 
 ```c++
-Person *p = new Person();
+Person* p = new Person();
 p->setFirstName("lawrence");
 p->setLastName("welk");
-p->setAge("
+p->setAge("102");
 ```
 
 This means you must manually set the characteristics of your `Person`, which can get cumberson as it's easy to forget to 'set' all the fields:
