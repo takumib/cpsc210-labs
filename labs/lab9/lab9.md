@@ -33,16 +33,16 @@ The `Person` class is simply designed to be some representation
 class Person {
 public:
     Person(); 
-    Person(string firstname, string lastname, int age, char gender);	
-
-    string getFirstName();	
-	void setFirstName(string new_name);
+    Person(std::string firstname, std::string lastname, int age, char gender);	
+    ~Person();
+    
+    std::string getFirstName();	
+    void setFirstName(string new_name);
 	...
 
-    ~Person();
 private:
-    string first_name;
-    string last_name;
+    std::string first_name;
+    std::string last_name;
     int age;
     char gender;
 };
@@ -91,7 +91,7 @@ meaning in order to 'make' and use a `Person` in some client context, you must p
 all necessary name, age, and gender information at the time of creation like this:
 
 ```c++
-Person *p = new Person("lawrence", "welk", 102, 'M');
+Person* p = new Person("lawrence", "welk", 102, 'M');
 ```
 
 Then I can pull this information out or manipulate it by calling the available 
@@ -110,7 +110,8 @@ Person::Person(string firstname, string lastname, int age, char gender) :
     first_name(firstname), 
     last_name(lastname), 
     age(age), 
-    gender(gender) {}
+    gender(gender) 
+{}
 ```
 
 #### Default constructors 
@@ -152,6 +153,7 @@ g++ main.cpp person.cpp -o lab9
 
 ## Handin
 
-To hand in your project use the *tar czvf* command to turn in all of your `.cpp` and `.h` files and name the file `lab9.tar.gz`. Use the [handin](http://handin.cs.clemson.edu/courses) website to turn in your lab 9.
+To hand in your project use the *tar czvf* command to turn in all of your `.cpp` and `.h` files and name the file `lab9_handin.tar.gz`. Use the [handin](http://handin.cs.clemson.edu/courses) website to turn in your lab 9.
 
 ## Starter kit
+Dowload using [this](https://github.com/Welchd1/cpsc210-labs/releases/download/9.0/lab9.tar.gz) link.
