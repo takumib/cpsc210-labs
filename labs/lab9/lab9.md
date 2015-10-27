@@ -129,10 +129,7 @@ Person::Person() {
 }
 ```
 
-
-requires a combination of additional calls to initialize
-the class's data fields.
-For example:
+While this approach does indeed create the object, you'lneed to manually adjust the characteristics of your `Person` like so:
 
 ```c++
 Person* p = new Person();
@@ -141,7 +138,7 @@ p->setLastName("welk");
 p->setAge("102");
 ```
 
-This means you must manually set the characteristics of your `Person`, which can get cumberson as it's easy to forget to 'set' all the fields
+Clearly this can get cumbersome as it's easy to forget to 'set' all the fields.
 
 ## Task 2: Create a new `Person` object
 
