@@ -22,7 +22,7 @@ be your first foray into **object oriented programming** -- which will (hopefull
 change the way you design, structure, and write your code from here on out. 
 So as usual, be patient. 
 
-## Task: understand and implement `Person`
+## Task 1: understand and implement `Person`
 
 The `Person` class is simply designed to be some representation 
 ('abstraction' if you like) of a person like your or me. 
@@ -141,7 +141,13 @@ p->setLastName("welk");
 p->setAge("102");
 ```
 
-This means you must manually set the characteristics of your `Person`, which can get cumberson as it's easy to forget to 'set' all the fields:
+This means you must manually set the characteristics of your `Person`, which can get cumberson as it's easy to forget to 'set' all the fields
+
+## Task 2: Create a new `Person` object
+
+The next task is to create a new `Person` pointer object inside of `main.cpp`. The goal is to create a new person using the `new` using eiter the default constructor or the constructor that initializes all fields. Then use some of the set methods and print out the `Person`.
+
+There is no explicit guideline to do this. This is merely meant to practice creating a new `Person` and utilizing some of the methods.
 
 ## Testing
 
