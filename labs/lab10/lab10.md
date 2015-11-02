@@ -61,8 +61,8 @@ objects.
 
 This will allow us to do stuff like the following:
 ```c++
-Vector *v1 = new Vector(3, 6);
-Vector *v2 = new Vector(5, 1);
+Vector v1(3, 6);
+Vector v2(5, 1);
 
 std::cout << "sum is: " << v1 + v2 << std::endl;
 ```
