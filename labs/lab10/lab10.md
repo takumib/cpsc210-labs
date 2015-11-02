@@ -77,7 +77,7 @@ section.
 To compile and test your code type this:
 
 ```c++
-g++ main.cpp person.cpp -o lab9
+g++ vector.cpp main.cpp -o lab10
 ```
 
 ## Handin
