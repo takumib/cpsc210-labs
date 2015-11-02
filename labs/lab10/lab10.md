@@ -105,6 +105,6 @@ incorrectly tarred -- meaning one or more files were unable to be decompressed
 or just came out garbled and un-readable. So check before you submit!*
 
 ## Starter kit
-Dowload using [this](https://github.com/Welchd1/cpsc210-labs/releases/download/9.0/lab9.tar.gz) link.
+Dowload using [this](https://github.com/Welchd1/cpsc210-labs/releases/download/10.0/lab10.tar.gz) link.
 
 
