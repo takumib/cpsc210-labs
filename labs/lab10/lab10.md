@@ -16,7 +16,7 @@ write a `Vector` class to encapsulate all the properties we'd expect of a vector
 class Vector {
 public:
     Vector();
-    Vector(double, double, double);
+    Vector(double, double);
     ~Vector();
 	
     Vector operator+(const Vector&);
@@ -58,10 +58,9 @@ objects.
 
 |*a note on operators|
 |-------------|
-|*In case you're unaware, symbols such as '+', '-', '\', etc are commonly referred to as binary (infix) operators. Infix means the name sits in the middle of the the two (left and right side) arguments.*|
+|*In case you're unaware, symbols such as '+', '-', '\', etc are commonly referred to as binary (infix) operators. Infix means the name sits in the middle of two (left and right hand side) arguments.*|
 
-
-This will allow us to do stuff like the following:
+This allows us to do stuff like the following:
 ```c++
 Vector v1(3, 6);
 Vector v2(5, 1);
@@ -69,6 +68,17 @@ Vector v3;
 
 v3 = v1 + v2;
 ```
+
+#### Declaring an overloaded operator
+
+Here's the declaration of our overloaded `+` operator taken from the `.h` above:
+
+```c++
+Vector operator+(const Vector&);
+```
+The syntax for this can admittedly be kind of confusing if you're seeing it for the first time, so we'll walk through it here. As we're used to, the return type, `Vector`, is the first thing we declare, so think of this as the type that results from applying the `+` operator. Next, we write `operator` followed immediately by the symbol we want to overload, in this case: `+` (note that C++ internally has a fixed list of acceptable operator symbols, so you can't just use anything as an operator, like `j` -- C++ must approve of it).
+
+You'll note also that we've declared only a single parameter, `const Vector&`, which can be kind of confusing since we already stated that `+` should have two parameters -- one corresponding to the left-hand-side of the operator, and one for the right-hand-side. In this case however, the `Vector` object itself serves as an *implicit* left hand side argument, this is why we declare only one formal parameter to the function.
 
 ##Task: implement `vector.cpp`
 
