@@ -15,23 +15,25 @@ write a `Vector` class to encapsulate all the properties we'd expect of a vector
 ```c++
 class Vector {
 public:
-	Vector();
-	Vector(double, double, double);
-	~Vector();
+    Vector();
+    Vector(double, double, double);
+    ~Vector();
 	
-	Vector operator+(const Vector&);
-	Vector operator-(const Vector&);
-	Vector& operator+=(const Vector&);
+    Vector operator+(const Vector&);
+    Vector operator-(const Vector&);
+    Vector& operator+=(const Vector&);
     Vector& operator-=(const Vector&);
     Vector operator*(double);
-​
+
     double magnitude();
     Vector normalize();
     double dot(const Vector&);
-​
+
     double getX();
     double getY();
-​
+
+    friend std::ostream& operator<<(std::ostream&, const Vector&);
+    
 private:
     double x;
     double y;
@@ -63,11 +65,12 @@ This will allow us to do stuff like the following:
 ```c++
 Vector v1(3, 6);
 Vector v2(5, 1);
+Vector v3;
 
-std::cout << "sum is: " << v1 + v2 << std::endl;
+v3 = v1 + v2;
 ```
 
-##Task: implement `vector.h`
+##Task: implement `vector.cpp`
 
 Your job is to write the implementation of the `Vector` class outlined in the previous
 section.
