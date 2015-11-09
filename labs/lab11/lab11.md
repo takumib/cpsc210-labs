@@ -153,7 +153,7 @@ setup as a guide.
 To compile and test your code type this:
 
 ```c++
-g++ main.cpp shape.cpp rectangle.cpp circle.cpp rightTriangle.cpp -o lab11
+g++ -Wall main.cpp shape.cpp rectangle.cpp circle.cpp rightTriangle.cpp -o lab11
 ./lab11
 ```
 
