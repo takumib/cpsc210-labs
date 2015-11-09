@@ -143,7 +143,7 @@ code there. When you name your class, it should be called `RightTriangle`.
 ## Task 2: test your `RightTriangle` implementation
 
 Inside of `main.cpp`, you will need to create a new `RightTriangle` and print out
-the output of the computeArea method just like in the examples provided already.
+the output of the `computeArea()` method just like in the examples provided already.
 
 **Note**: remember while doing this to use `#include` properly. Use the previous
 setup as a guide.
