@@ -19,7 +19,7 @@ To demonstrate and introduce the notion of inheritance, we'll start by defining 
 `Shape` class.
 
 ```c++
-//Shape.h
+// Shape.h
 class Shape {
 public:
     Shape();
@@ -40,7 +40,7 @@ protected:
 As specified in the header above, our `Shape`s are (unsurprisingly) defined in terms of
 a `width`, `height`, and associated methods for accessing and modifying these variables.
 
-There a several of things worth noting here:
+There are several things worth noting here:
 
 1. **generality:** `Shape` at this point doesn't seem like a terribly descriptive/useful
 class.. For instance, what kind of shape are we talking about? Is it a triangle, a 
@@ -67,13 +67,13 @@ Due to the inclusion of the (`virtual`) method,
 virtual double computeArea() = 0
 ```
 
-you can think of the entire `Shape` class as *abstract* class (a base class) -- meaning we 
+you can think of the entire `Shape` class as an *abstract* class (a base class) -- meaning we 
 can't instantiate it since `computeArea()` will not have an implementation in the 
 corresponding `.cpp` file (remember, this is what the `virtual` part does). This means 
 that it's time to write a *subclass* of shape -- so let's do a `Rectangle` first:
 
 ```c++
-//Rectangle.h
+// Rectangle.h
 class Rectangle : public Shape {
 public:
     Rectangle();
@@ -83,7 +83,7 @@ public:
 ```
 you'll notice that instead of just saying 
 ```c++
-class Rectanle { ... };
+class Rectangle { ... };
 ```
 as we would normally do, we instead use the following syntax:
 ```C++
@@ -134,7 +134,7 @@ and overall much more maintainable.
 
 As the section title states, your job for this lab is to extend `Shape` with a 
 `RightTriangle` subclass and implement the `computeArea()` method for this shape. To 
-help get started, you should refer to full sourcecode for the `Rectangle` subclass 
+help get started, you should refer to full sourcecode for the `Rectangle` and `Circle` subclass 
 included in the starter kit.
 
 ## Testing
@@ -142,12 +142,13 @@ included in the starter kit.
 To compile and test your code type this:
 
 ```c++
-g++ main.cpp person.cpp -o lab9
+g++ main.cpp rectangle.cpp circle.cpp rightTriangle.cpp -o lab11
+./lab11
 ```
 
 ## Handin
 
-To hand in your project use the *tar czvf* command to turn in all of your `.cpp` and `.h` files and name the file `lab9_handin.tar.gz`. Use the [handin](http://handin.cs.clemson.edu/courses) website to turn in your lab 9.
+To hand in your project use the *tar czvf* command to turn in all of your `.cpp` and `.h` files and name the file `lab11_handin.tar.gz`. Use the [handin](http://handin.cs.clemson.edu/courses) website to turn in your lab 11.
 
 ## Starter kit
 Dowload using [this](https://github.com/Welchd1/cpsc210-labs/releases/download/9.0/lab9.tar.gz) link.
