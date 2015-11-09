@@ -130,19 +130,30 @@ In summary, the fact that most functionality lives in `Shape` and only needed to
 once (and is able to reused by all subclasses) helps make our design and code more modular,
 and overall much more maintainable.
 
-## Task: implement a `RightTriangle` subclass
+## Task 1: implement a `RightTriangle` subclass
 
 As the section title states, your job for this lab is to extend `Shape` with a 
 `RightTriangle` subclass and implement the `computeArea()` method for this shape. To 
 help get started, you should refer to full sourcecode for the `Rectangle` and `Circle` subclass 
 included in the starter kit.
 
+**Note**: This means you will need to create your own `rightTriangle.h/cpp` files and add
+code there. When you name your class, it should be called `RightTriangle`.
+
+## Task 2: test your `RightTriangle` implementation
+
+Inside of `main.cpp`, you will need to create a new `RightTriangle` and print out
+the output of the computeArea method just like in the examples provided already.
+
+**Note**: remember while doing this to use `#include` properly. Use the previous
+setup as a guide.
+
 ## Testing
 
 To compile and test your code type this:
 
 ```c++
-g++ main.cpp rectangle.cpp circle.cpp rightTriangle.cpp -o lab11
+g++ main.cpp shape.cpp rectangle.cpp circle.cpp rightTriangle.cpp -o lab11
 ./lab11
 ```
 
