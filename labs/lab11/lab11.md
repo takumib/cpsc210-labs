@@ -157,6 +157,8 @@ g++ main.cpp shape.cpp rectangle.cpp circle.cpp rightTriangle.cpp -o lab11
 ./lab11
 ```
 
+**Remember**: This will not work until you have created workable code for `rightTriangle.cpp`.
+
 ## Handin
 
 To hand in your project use the *tar czvf* command to turn in all of your `.cpp` and `.h` files and name the file `lab11_handin.tar.gz`. Use the [handin](http://handin.cs.clemson.edu/courses) website to turn in your lab 11.
