@@ -57,7 +57,7 @@ shapes[i]->getDescription() // or
 shapes[i]->computeArea()
 ```
 
-Use the output provided to guide you in how your printout should look.
+Use the output provided to guide you in how your printout should look. The output may not look exactly the same as provided because you gave it different parameters or different shapes. Do not worry about this. Use the output simply as a guide in how you should structure your output.
 
 ## Testing
 
@@ -73,4 +73,4 @@ g++ -Wall main.cpp shape.cpp rectangle.cpp circle.cpp rightTriangle.cpp -o lab12
 To hand in your project use the *tar czvf* command to turn in all of your `.cpp` and `.h` files and name the file `lab12_handin.tar.gz`. Use the [handin](http://handin.cs.clemson.edu/courses) website to turn in your lab 12.
 
 ## Starter kit
-Download using [this](https://github.com/Welchd1/cpsc210-labs/releases/download/11.0/lab11.tar.gz) link.
+Download using [this](https://github.com/Welchd1/cpsc210-labs/releases/download/12.0/lab12.tar.gz) link.
