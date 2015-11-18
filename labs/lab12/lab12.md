@@ -14,7 +14,7 @@ public:
     Shape(double, double, const std::string);
     double getWidth();
     double getHeight();
-    virtual const std::string& getDescription() = 0;
+    virtual std::string getDescription() = 0;
     virtual double computeArea() = 0;
 
     void setWidth(double);
