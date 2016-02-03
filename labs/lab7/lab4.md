@@ -8,7 +8,7 @@ should help eliminate some of the edge cases and complexity that arise in needin
 with non-square matrices (3x4, 2x1, etc).
 
 As always, if you're hazy on the mathematical notion of a matrix, go ahead and read up 
-on them [here](https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab7/matrices.pdf).
+on them [here](https://github.com/takumib/cpsc210-labs/blob/master/labs/lab7/matrices.pdf).
 
 **Note:** Please read through all instructions carefully. You are responsible for handing 
 in all material on time and correctly as well as following grading criteria below.
@@ -78,7 +78,7 @@ double m[3][3] = {
                  };
 ```
 
-Take note of the above creation of a 2D `double` array. We can imagine the 2D array as an array of 1D arrays. To access a particular element from `m` after we have created it, we must use valid indices for accessing `m `. We denote the particular row and column that we wish to receive by writing `m[i][j]` where `i` denotes the row and `j` denotes the column starting at index 0. So, `m[0][0]` accesses the top left element and `m[2][2]` accesses the bottom right element. We can also set an element in `m` by using the assignment operator `=` like this `m[1][1] = 0`. This sets the middle element in the matrix to 0. In order to access or set each element in a matrix we will use doubly and triply nested for-loops as discussed in the next section. For specific matrix operation help, please use [A Brief Introduction to Matrix Operations](https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab7/matrices.pdf).
+Take note of the above creation of a 2D `double` array. We can imagine the 2D array as an array of 1D arrays. To access a particular element from `m` after we have created it, we must use valid indices for accessing `m `. We denote the particular row and column that we wish to receive by writing `m[i][j]` where `i` denotes the row and `j` denotes the column starting at index 0. So, `m[0][0]` accesses the top left element and `m[2][2]` accesses the bottom right element. We can also set an element in `m` by using the assignment operator `=` like this `m[1][1] = 0`. This sets the middle element in the matrix to 0. In order to access or set each element in a matrix we will use doubly and triply nested for-loops as discussed in the next section. For specific matrix operation help, please use [A Brief Introduction to Matrix Operations](https://github.com/takumib/cpsc210-labs/blob/master/labs/lab7/matrices.pdf).
 
 ## Using a doubly or triply nested for-loop
 
@@ -115,7 +115,7 @@ Remember that when going through the for-loop, the innermost loop will complete 
 ## Testing
 
 To compile your code, type `make`. This will build the code and generate an executable for it 
-automatically. Then to run, all you need to do now is type `./lab7`. Also,
+automatically. Then to run, all you need to do now is type `./lab4`. Also,
 remember that you can freshen your working directory -- deleting any lingering
 `*.o` files -- by typing `make clean`.
 
@@ -128,10 +128,10 @@ When you're finished, and you are confident your work is *adequately commented* 
 *correct*, go ahead and 'tarify' with the following command:
 
 ```
-tar cvf lab7_handin.tar matrix.h matrix.c matrixtest.c output.txt Makefile
+tar cvf lab4_handin.tar matrix.h matrix.c matrixtest.c output.txt Makefile
 ```
 
-and submit the resulting `lab7_handin.tar` to the appropriate bucket on 
+and submit the resulting `lab4_handin.tar` to the appropriate bucket on 
 [handin](https://handin.cs.clemson.edu/courses/).
 
 ## Due Date
@@ -184,16 +184,16 @@ int main() {
 
 ## Downloading and Decompressing.
 
-As usual you can either browse the default files here on [GitHub]
-(https://github.com/Welchd1/cpsc210-labs/tree/lab7-dev/labs/lab7/src) or download the 
-starter kit [here](https://github.com/Welchd1/cpsc210-labs/releases/download/7.0/lab7.tar.gz).
+You can either browse the default files here on [GitHub]
+(https://github.com/takumib/cpsc210-labs/tree/lab7-dev/labs/lab7/src) or download the 
+starter kit [here](https://github.com/takumib/cpsc210-labs/releases/download/7.0/lab7.tar.gz).
 
-After you have downloaded `lab7.tar.gz` you can decompress this by typing:
+After you have downloaded `lab4.tar.gz` you can decompress this by typing:
 
-`tar xzvf lab7.tar.gz`
+`tar xzvf lab4.tar.gz`
 
-**Note:** remember to move your `lab7.tar.gz` into your cpsc2101/lab7 directory before decompression.
+**Note:** remember to move your `lab4.tar.gz` into your cpsc2101/lab7 directory before decompression.
 
 ## Final Note
 
-At any point during or after the lab, do not hesitate to ask for help or send an email to both **Takumi Bolte** (tbolte@g.clemson.edu) and **Daniel Welch** (dtwelch@g.clemson.edu). We will try to respond as fast as we can through email and can set up one-on-one meeting times depending on our schedule for the week.
+At any point during or after the lab, do not hesitate to ask for help or send an email to **Takumi Bolte** (tbolte@g.clemson.edu).
