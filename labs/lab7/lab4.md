@@ -184,9 +184,7 @@ int main() {
 
 ## Downloading and Decompressing.
 
-You can either browse the default files here on [GitHub]
-(https://github.com/takumib/cpsc210-labs/tree/lab7-dev/labs/lab7/src) or download the 
-starter kit [here](https://github.com/takumib/cpsc210-labs/releases/download/7.0/lab7.tar.gz).
+You can Download the starter kit [here](https://github.com/takumib/cpsc210-labs/releases/download/4.0/lab4.tar.gz).
 
 After you have downloaded `lab4.tar.gz` you can decompress this by typing:
 
