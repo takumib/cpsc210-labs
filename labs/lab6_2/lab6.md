@@ -12,8 +12,8 @@ linked list and iterator for use in future labs -- not to mention
 experience in writing increasingly complex functions.
 
 As always, you can either download your complete lab 6 starter kit on the 
-[releases page](https://github.com/Welchd1/cpsc210-labs/releases/download/6.0/lab6.tar.gz) or peruse the default starter files [here]
-(https://github.com/Welchd1/cpsc210-labs/tree/master/labs/lab6/src) on GitHub. (here's the command for decompressing the tar file: `tar xvzf lab6.tar.gz`)
+[releases page](https://github.com/takumib/cpsc210-labs/releases/download/6.0/lab6.tar) or peruse the default starter files [here]
+(https://github.com/Welchd1/cpsc210-labs/tree/master/labs/lab6/src) on GitHub. (here's the command for decompressing the tar file: `tar xvf lab6.tar`)
 
 ## Background: void pointers and type casting
 
