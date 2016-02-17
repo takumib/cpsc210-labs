@@ -94,9 +94,8 @@ was discussed in two key respects, **so pay attention**:
 instead be added to the **head** (front) of the list.
 
 ### Key structures
-In [list.h](https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab5/src/list.h) we 
-provide two structures that give us everything we need to implement the desired list data 
-structure. 
+In `list.h` we provide two structures that give us everything we need to 
+implement the desired list data structure. 
 
 #### `node_t`
 The first of these is `node_t`:
@@ -201,7 +200,7 @@ int iter_at_end(iterator* iter);
 node* iter_get(iterator* iter);
 ```
 
-### A note about using `malloc()` and `free()`
+### A note about using `malloc()`
 
 When using malloc remember the following syntax:
 
