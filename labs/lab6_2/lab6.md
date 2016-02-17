@@ -152,40 +152,6 @@ All of your work will be done in either `list.c` or `iterator.c`. All testing co
 The structures we'll use in the implementation of our doubly linked list are 
 very similar to those we would use for a singly linked list.
 
-### `node` type
-Here's our basic `node` structure:
-
-```c
-typedef struct node_t {
-	struct node_t *next;
-	struct node_t *prev;
-	void *data;
-} node;
-```
-
-Each `node` in our list maintains a pointer to its `next` sibling as well as its
-previous (`prev`), as illustrated below:
-
-![dlink](https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab6/figures/dlink_diag1.png)
-
-### `list` type
-
-And here's our basic `list` controller struct:
-```c
-typedef struct list_t {
-    node* head;
-    node* tail;
-} list;
-```
-
-Conceptually, the list controller shown above adds the following bits to our picture:
-
-![dlink](https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab6/figures/dlink_diag2.png)
-
-As shown, the `list` object merely maintains a pointer to the `head` (first) and `tail` 
-(last) nodes of our list. If our list is only one link long, then `head == tail`, meaning 
-both point to the same `node`.
-
 ### Linked list functions
 
 ```c
@@ -193,13 +159,13 @@ both point to the same `node`.
 list* list_create();
 
 /** Adds a new node containing 'item' onto the end of list 'l'. */
-void list_append(list* l, void* item);
+void list_addFirst(list* l, void* item);
 
-/** Removes the last node from a non-empty list 'l' */
-void list_remove_last(list* l);
+/** resets list to head */
+void list_reset(list* l);
 
-/** Removes the first node from a non-empty list 'l' */
-void list_remove_first(list* l);
+/** returns current node and advances the list */
+void *list_getnext(list* l);
 ```
 ## Task #2: implement an iterator
 
@@ -228,20 +194,11 @@ iterator* iter_create(list* l);
 /** advances the iterator by a single node. */
 void iter_advance(iterator* iter);
 
-/** advances the iterator by a single node and returns the data of the node associated before it was advanced */
-void* iter_next(iterator* iter);
-
-/** advances the iterator back by a single node and returns the data of the node associated before it was moved back */
-void* iter_prev(iterator* iter);
-
 /** returns 1 if iter's current pointer is NULL, 0 otherwise. */
 int iter_at_end(iterator* iter);
 
 /** returns the current node */
 node* iter_get(iterator* iter);
-
-/** removes the current node in the iterator from a nom-empty list. */
-void iter_remove(iterator* iter);
 ```
 
 ### A note about using `malloc()` and `free()`
@@ -253,49 +210,17 @@ When using malloc remember the following syntax:
  list* l = (list*)malloc(sizeof(list));
 ```
 
-The function `free()` is the accompanying function to `malloc()` that frees up your data.
-When using `free()`, you will only need to call this in your remove functions in `list.c` or `iterator.c`:
-
-```c
-node* n = (node*)malloc(sizeof(node));
-.
-. /** These will be in separate functions. */
-.
-free(n);
-n = NULL;
-```
-
-Note that we do not try to dereference the pointer. When we use free we simply pass the variable name to free.
-
 ### Testing
 
 After you get to a point where you've implemented several functions for your linked list,
 (say, `list_create()` and `list_append()`), make sure you're in the directory housing
-your lab files and type `make`. Assuming no errors, go ahead and type `make test` to run 
-the provided test driver in `test.c`:
-
-![testing1](https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab6/figures/test_output.png)
-
-If all goes well you should see a "passed" appear in green next to each test,
-meaning you can be *reasonably* sure that your implementation is working as expected.
-
-### Running
-
-If all of your tests have passed and do not get any segmentation faults,
-you can run the main program that prints out the lists by typing `make`,
-then typing `make run`, which will run the code from `main.c`.
-The output should look similar to the figure shown below:
-
-![run](https://github.com/Welchd1/cpsc210-labs/blob/master/labs/lab6/figures/run_output.png)
+your lab files and type `make`. To run the lab type in `./lab6`.
 
 ### Hints
 
-* Some of the functions you will implement can be copied from last week such as creating your list and nodes.
-* All of your iterator functions should use just the iterator's current pointer except the `iter_remove()` function which also uses the list.
 * In your `list_at_end()` function, you do not need to return an actual `0`, or `1`, you can simply return `iter->current == null`. This   will return the correct result on its own.
-* Whenever you change modify the list inside `list.c` or `iterator.c`, make sure that you think about what your previous and     next pointers should point to, as well as if head and tail should change.
+* Whenever you change modify the list inside `list.c` or `iterator.c`, make sure that you think about what your next pointer should point to, as well as if head and current should change.
 * Think about the corner cases: am I at the end of the list or beginning of the list? Is there only a single item in the list?
-* When you use `free()`, also set anything pointing to the thing that you free'd to `NULL`.
 * Remember to draw out your nodes and links if you get stuck.
 
 ## Handin
