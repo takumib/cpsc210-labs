@@ -157,7 +157,7 @@ very similar to those we would use for a singly linked list.
 /** Returns a new list with fields initialized to null. */
 list* list_create();
 
-/** Adds a new node containing 'item' onto the end of list 'l'. */
+/** Adds a new node containing 'item' onto the beginning of list 'l'. */
 void list_addFirst(list* l, void* item);
 
 /** resets list to head */
@@ -212,7 +212,7 @@ When using malloc remember the following syntax:
 ### Testing
 
 After you get to a point where you've implemented several functions for your linked list,
-(say, `list_create()` and `list_append()`), make sure you're in the directory housing
+(say, `list_create()` and `list_addFirst()`), make sure you're in the directory housing
 your lab files and type `make`. To run the lab type in `./lab6`.
 
 ### Hints
