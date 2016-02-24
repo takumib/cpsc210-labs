@@ -151,12 +151,14 @@ There is no explicit guideline to do this. This is merely meant to practice crea
 To compile and test your code type this:
 
 ```c++
-g++ main.cpp person.cpp -o lab9
+g++ main.cpp person.cpp -o lab7
 ```
 
 ## Handin
 
-To hand in your project use the *tar czvf* command to turn in all of your `.cpp` and `.h` files and name the file `lab9_handin.tar.gz`. Use the [handin](http://handin.cs.clemson.edu/courses) website to turn in your lab 9.
+To hand in your project use the *tar cvf* command to turn in all of your `.cpp` and `.h` files and name the file `lab7_handin.tar`. Use the [handin](http://handin.cs.clemson.edu/courses) website to turn in your lab 7.
 
 ## Starter kit
-Dowload using [this](https://github.com/Welchd1/cpsc210-labs/releases/download/9.0/lab9.tar.gz) link.
+Dowload using [this](https://github.com/takumib/cpsc210-labs/releases/download/7.0/lab7.tar) link.
+
+To extract the tar *Remember*: tar xvf lab7.tar
