@@ -107,10 +107,6 @@ various instance variables to the values appearing within the `(` ... `)` parts:
 
 ```c++
 Person::Person(string firstname, string lastname, int age, char gender) :
-    first_name(firstname), 
-    last_name(lastname), 
-    age(age), 
-    gender(gender) 
 {}
 ```
 
@@ -129,7 +125,7 @@ Person::Person() {
 }
 ```
 
-While this approach does indeed create the object, you'lneed to manually adjust the characteristics of your `Person` like so:
+While this approach does indeed create the object, you will need to manually adjust the characteristics of your `Person` like so:
 
 ```c++
 Person* p = new Person();
