@@ -25,9 +25,6 @@ private:
 
 Above, the C++ version of the Node class is very similar to the `node` struct that we used in the linked-list lab earlier this semester. Now, we are able to associate methods along with member variables with a Node class.
 
-Note: when we create a new node we can pass the item as a parameter to one of the specialized constructors. 
-
-
 ### The `List` class
 
 ```c++
@@ -46,6 +43,10 @@ private:
 };
 ```
 Again, the list is very similar to the list struct that we used in the C version of the linked-list.
+
+*Note*: look for the differences in the C and C++ versions of the source code. We no longer have `list_` prefix for our functions since we can now associate methods along with member variables using a class. We are also taking advantage of C++'s use of constructors. This means that we do not need to use `malloc` or `new` within our constructor. We only need to initialize our member variables.
+
+*Note*: This does not mean we will not be using the `new` operator however. Instead of using `malloc` to create a new node struct pointer, we will be using the `new` operator to create a new instance of a Node pointer (Hint: pay attention to the constructors that we can use for the node; we can use the specialized constructor to initialize our item directly).
 
 ## Task 2: implement iterator in C++
 
@@ -78,7 +79,7 @@ Your can download the starting source files [here](https://github.com/takumib/cp
 
 ## Handin
 
-When you are finished, tar up your `.c` and `.h` files:
+When you are finished and have commented and compared your output with the `output.txt` file provided, tar up your `.c` and `.h` files:
 
 `tar cvf lab8.tar [list your cpp and header files]`
 
