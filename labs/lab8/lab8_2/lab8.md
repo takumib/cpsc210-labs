@@ -70,6 +70,12 @@ private:
 
 With the new `Iterator` class, we see one particular change to the at end function we saw in the C version of the iterator. We have changed this to the `hasNext()` method here and return a `bool` type. The `bool` type is a C++ type that can give a `true` or `false` value instead of using 0 or 1 that we used previously.
 
+## Download Source Files
+
+Your can download the starting source files [here](https://github.com/takumib/cpsc210-labs/releases/download/8.0/lab8.tar).
+
+*Remember*: to untar your lab use `tar xvf lab8.tar`
+
 ## Handin
 
 When you are finished, tar up your `.c` and `.h` files:
