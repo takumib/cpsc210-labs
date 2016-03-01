@@ -1,28 +1,55 @@
+/*
+ * Name:
+ * Date:
+ * File: node.cpp
+ * Description:
+ */
 #include "node.h"
 
-Node::Node() :
-    item(nullptr),
-    next(nullptr)
+#include <cstring>
+
+/*
+ * Default Node constructor.
+ * Hint: the member variables need to be initialized to NULL.
+ */
+Node::Node()
 {}
 
-Node::Node(void* itm) :
-    item(itm),
+/*
+ * Specialized constructor.
+ * Hint: still need to initialize member variables, but one of them
+ *       will be set to the constructor argument.
+ */
+Node::Node(void* itm)
 {}
 
+/*
+ * Node Destructor
+ */
 Node::~Node()
-{}
+{
+    // left blank intentionally.
+}
 
+/*
+ * Returns the next node.
+ */
 Node* Node::getNext()
 {
-    return next;
+    return NULL;
 }
 
+/*
+ * Returns the Node's item.
+ */
 void* Node::getItem()
 {
-    return item;
+    return NULL;
 }
 
+/*
+ * Sets the Node's next variable.
+ */
 void Node::setNext(Node* n)
 {
-    next = n;
 }

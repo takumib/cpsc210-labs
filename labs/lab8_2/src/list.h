@@ -11,6 +11,7 @@ public:
     void addFirst(void*);
     void reset();
     void* getCurItem();
+    Node* getHead();
 
 private:
     Node* head;
