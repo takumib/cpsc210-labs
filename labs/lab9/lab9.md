@@ -64,6 +64,44 @@ The syntax for this can admittedly be kind of confusing if you're seeing it for 
 
 You'll note also that we've declared only a single parameter, `const Matrix&`, which can be kind of confusing since we already stated that `+` should have two parameters -- one corresponding to the left-hand-side of the operator, and one for the right-hand-side. In this case however, the `Matrix` object itself serves as an *implicit* left hand side argument, this is why we declare only one formal parameter to the function.
 
+## Using the `new` operator with arrays
+
+When we want to create a pointer array using the using malloc we would normally type something like:
+
+```c
+int* x = (int*)malloc(sizeof(int) * 10);
+```
+
+Now, with C++ we can replace this with the new operator:
+
+```c++
+int* x = new int[10];
+```
+
+Note the syntax if we want to create an array of 10 elements for the integer array.
+
+If we wanted to create a 2-D array in C++, we can extend this further by first allocating the number of rows that we want and the number of columns that we want.
+
+```c++
+int** x = new int*[rows];
+for(int i = 0; i < rows; i++) {
+    x[i] = new int[cols];
+}
+```
+This will be the type of initialization we want for our `Matrix` constructor.
+
+## Deleting our `Matrix`
+
+Since we used the `new` operator to create our matrix, we will need to use the `delete` operator to delete our matrix. Similar to our constructor we first begin by deleting each of the columns row by row.
+
+for(int i = 0; i < rows; i++) {
+    delete[] x[i];
+}
+
+delete[] x;
+
+Note the syntax of `delete`. Since we are deleting an array of items we use `delete[]` rather than just `delete`. This code will be used in the destructor.
+
 ## Testing
 
 To compile and test your code type this:
