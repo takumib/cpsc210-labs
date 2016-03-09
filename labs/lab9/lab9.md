@@ -18,10 +18,6 @@ public:
     Matrix operator*(const Matrix&);
     Matrix operator-(const Matrix&);
 
-    // Matrix scalar operations
-    Matrix operator*(const double);
-    Matrix operator/(const double);
-
     void print();
 
     double* operator[](int);
