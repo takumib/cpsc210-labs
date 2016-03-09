@@ -115,4 +115,4 @@ g++ main.cpp matrix.cpp -o lab9
 To hand in your project use the *tar cvf* command to turn in all of your `.cpp` and `.h` files and name the file `lab9_handin.ta`. Use the [handin](http://handin.cs.clemson.edu/courses) website to turn in your lab 9.
 
 ## Starter kit
-Dowload using [this](https://github.com/Welchd1/cpsc210-labs/releases/download/9.0/lab9.tar.gz) link.
+Dowload using [this](https://github.com/takumib/cpsc210-labs/releases/download/9.0/lab9.tar) link.
