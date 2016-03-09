@@ -1,162 +1,80 @@
 ## Objectives
 
-So far this semester we've done our programming in the C language, meaning all of 
-the programs we've seen have been written in a *procedural* style. That is, the various 
-chunks composing and guiding the overall logic of our programs was (hopefully!) 
-decomposed into various separate functions. And when we wanted to execute these various 
-parts in some larger sequence, we'd simply call our functions in a certain order. And 
-when we wanted to group data together, we'd simply pack it into a struct. 
+In today's lab, we will be implementing parts of a `Matrix` class in c++ using several new techiques: references and operator overloading. We have previously seen and implemented our own matrix in C using arrays. We can make use of the many new features that C++ uses to implement a matrix. Additionally we will learn how to use operator overloading to more naturally define a matrix as well as using references. 
 
-The outward objective of today's lab is give you a taste of C++ by having you 
-read, understand, and implement a simple `Person` class, then instantiate several 
-`Person` objects using a main driver that you will also write. 
-
-However, more than just introducing you to yet another language (they are, after all, 
-just tools for executing your logic), the actual objective here is to give you 
-some idea as to what programming with objects entails -- *and hopefully, 
-by extension: why it's so useful, and how it differs from the procedural approach 
-discussed above.*
-
-In short, you'll want to pay attention and ask questions since this might very well
-be your first foray into **object oriented programming** -- which will (hopefully) 
-change the way you design, structure, and write your code from here on out. 
-So as usual, be patient. 
-
-## Task 1: understand and implement `Person`
-
-The `Person` class is simply designed to be some representation 
-('abstraction' if you like) of a person like your or me. 
+## Task 1: understand and implement the `Matrix` class
 
 ```c++
-//person.h
-
-class Person {
+class Matrix {
 public:
-    Person(); 
-    Person(std::string firstname, std::string lastname, int age, char gender);	
-    ~Person();
-    
-    std::string getFirstName();	
-    void setFirstName(string new_name);
-	...
+    Matrix(int, int);
+    Matrix(const Matrix&);
+    ~Matrix();
+
+    Matrix& operator=(const Matrix&);
+
+    // Matrix Matrix operations
+    Matrix operator+(const Matrix&);
+    Matrix operator*(const Matrix&);
+    Matrix operator-(const Matrix&);
+
+    // Matrix scalar operations
+    Matrix operator*(const double);
+    Matrix operator/(const double);
+
+    void print();
+
+    double* operator[](int);
+    const double* operator[](int) const;
+
+    int getRows() const;
+    int getCols() const;
+
+    Matrix transpose() const;
 
 private:
-    std::string first_name;
-    std::string last_name;
-    int age;
-    char gender;
+    int rows;
+    int cols;
+    double** mat;
 };
 ```
 
-Specifically, we've defined a 
-`Person` as something having a `first_name`, `last_name`, `age`, and `gender`. These 
-member variables/instance variables are defined in `person.h`, which, as usual for header 
-files, also declares prototypes for the various *methods the `Person` class supports.
+In the above implementation of a matrix, we have added several special methods that are prefixed with the word `operator` followed by an operation can be performed my a matrix and another type. 
 
-|*aside: methods vs. functions|
+## Operator Overloading
+
+Operator overloading enables custom operations to be defined for a given object. For example, in the C version of our matrix lab, we had to define the matrix add operation by creating a function called matrix_add(double m1[][], m2[][]) which took two double arrays. 
+
+In our C++ version, a slight improvement to this would be able to add two matrices together just as we would with integers, floats, or doubles:
+
+Matrix a;
+Matrix b;
+Matrix c = a + b;
+
+Operator overloading in fact gives us the power to do this as well as providing us with many more operations to perform as you will implement in today's lab.
+
+|*a note on operators|
 |-------------|
-| *A method is distinguished as an operation that is associated with an object. As such, they are typically declared in the `.h` file for a class and can access any (even private) member variables for the class (`first_name`, `last_name`, `age`, etc). Since C inherently lacks objects, there can be no notion of a 'method' and so everything in that language should be referred to as a function.* |
-
-This is a pretty typical organization for a C++ class. That is, you declare a collection
-of available methods and some number of private, *instance variables* that the methods 
-either use or alter.
-
-With this in mind, methods usually fall into two broad categories:
-
-* **Mutator methods**: Usually these methods names start with `set..`. 
-These are methods that allow clients (users of a class) to change the 
-*state* of the object. So in our `Person` example, `setFirstName(String new_name)` is
-a mutator (sometimes called a 'setter') method that allows users to change the name
-of a `Person`. If `setFirstName(..)` was not provided as a method, then users would 
-have no means of changing the name of a `Person`, since it's stored as a `private`
- variable -- which means it's inaccesible from outside the class. 
-
-* **Accessor methods**: These methods have names that are usually prefixed by `get..`.
-In short, these methods return allow you to access/'get-at' some (potentially private) 
-data stored within a class. For instance `getFirstName()` declares a string returning 
-the first name of the `Person`. 
-
-### "What makes a `Person` anyways?"
-
-To use a `Person` object, it must first be made (instantiated) via a class *constructor*. 
-In this case, there are actually two to choose from. 
-
-#### Parameterized constructors
-
-The first is declared like this in the header:
-```c++
-Person(std::string, std::string, int, char)
-```
-meaning in order to 'make' and use a `Person` in some client context, you must provide 
-all necessary name, age, and gender information at the time of creation like this:
+|*In case you're unaware, symbols such as '+', '-', '\', etc are commonly referred to as binary (infix) operators. Infix means the name sits in the middle of two (left and right hand side) arguments.*|
 
 ```c++
-Person* p = new Person("lawrence", "welk", 102, 'M');
+Matrix operator+(const Matrix&);
 ```
+The syntax for this can admittedly be kind of confusing if you're seeing it for the first time, so we'll walk through it here. As we're used to, the return type, `Matrix`, is the first thing we declare, so think of this as the type that results from applying the `+` operator. Next, we write `operator` followed immediately by the symbol we want to overload, in this case: `+` (note that C++ internally has a fixed list of acceptable operator symbols, so you can't just use anything as an operator, like `j` -- C++ must approve of it).
 
-Then I can pull this information out or manipulate it by calling the available 
-methods:
-
-```c++
-std::cout << p->getFirstName(); // prints: lawrence
-std::cout << p->getAge(); // prints: 102
-std::cout << p->setAge(116); // sets the private int variable 'age' to 116
-```
-As you might've guessed, internally the class constructor for `Person` is just setting
-various instance variables to the values appearing within the `(` ... `)` parts:
-
-```c++
-Person::Person(string firstname, string lastname, int age, char gender) :
-    first_name(firstname), 
-    last_name(lastname), 
-    age(age), 
-    gender(gender) 
-{}
-```
-
-#### Default constructors 
-
-The second constructor is referred to as a *default constructor*. A default constructor,
-while simple to instantiate, will automatically set the instance variables to some 
-preselected default values, like so:
-
-```c++
-Person::Person() {
-    first_name = " "; 
-    last_name = " "; 
-    age = 0; 
-    gender = 'N'; 	
-}
-```
-
-While this approach does indeed create the object, you'lneed to manually adjust the characteristics of your `Person` like so:
-
-```c++
-Person* p = new Person();
-p->setFirstName("lawrence");
-p->setLastName("welk");
-p->setAge("102");
-```
-
-Clearly this can get cumbersome as it's easy to forget to 'set' all the fields.
-
-## Task 2: Create a new `Person` object
-
-The next task is to create a new `Person` pointer object inside of `main.cpp`. The goal is to create a new person using the `new` using eiter the default constructor or the constructor that initializes all fields. Then use some of the set methods and print out the `Person`.
-
-There is no explicit guideline to do this. This is merely meant to practice creating a new `Person` and utilizing some of the methods.
+You'll note also that we've declared only a single parameter, `const Matrix&`, which can be kind of confusing since we already stated that `+` should have two parameters -- one corresponding to the left-hand-side of the operator, and one for the right-hand-side. In this case however, the `Matrix` object itself serves as an *implicit* left hand side argument, this is why we declare only one formal parameter to the function.
 
 ## Testing
 
 To compile and test your code type this:
 
 ```c++
-g++ main.cpp person.cpp -o lab9
+g++ main.cpp matrix.cpp -o lab9
 ```
 
 ## Handin
 
-To hand in your project use the *tar czvf* command to turn in all of your `.cpp` and `.h` files and name the file `lab9_handin.tar.gz`. Use the [handin](http://handin.cs.clemson.edu/courses) website to turn in your lab 9.
+To hand in your project use the *tar cvf* command to turn in all of your `.cpp` and `.h` files and name the file `lab9_handin.ta`. Use the [handin](http://handin.cs.clemson.edu/courses) website to turn in your lab 9.
 
 ## Starter kit
 Dowload using [this](https://github.com/Welchd1/cpsc210-labs/releases/download/9.0/lab9.tar.gz) link.
