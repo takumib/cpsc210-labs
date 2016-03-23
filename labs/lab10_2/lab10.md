@@ -153,15 +153,15 @@ setup as a guide.
 To compile and test your code type this:
 
 ```c++
-g++ -Wall main.cpp shape.cpp rectangle.cpp circle.cpp rightTriangle.cpp -o lab11
-./lab11
+g++ -Wall main.cpp shape.cpp rectangle.cpp circle.cpp rightTriangle.cpp -o lab10
+./lab10
 ```
 
 **Remember**: This will not work until you have created workable code for `rightTriangle.cpp`.
 
 ## Handin
 
-To hand in your project use the *tar cvf* command to turn in all of your `.cpp` and `.h` files and name the file `lab10_handin.tar`. Use the [handin](http://handin.cs.clemson.edu/courses) website to turn in your lab 11.
+To hand in your project use the *tar cvf* command to turn in all of your `.cpp` and `.h` files and name the file `lab10_handin.tar`. Use the [handin](http://handin.cs.clemson.edu/courses) website to turn in your lab 10.
 
 ## Starter kit
 Dowload using [this](https://github.com/takumib/cpsc210-labs/releases/download/10/lab10.tar) link.
