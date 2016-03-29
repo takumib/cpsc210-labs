@@ -1,0 +1,7 @@
+Rectangle's Area is: 12
+Circle's Area is: 113.097
+Right Triangle's Area is: 8
+Right Triangle's Area is: 14
+Right Triangle's Area is: 3
+Circle's Area is: 50.2655
+Rectangle's Area is: 18
