@@ -1,7 +1,6 @@
 ## Objectives
 
-Building on our shape hierarchy built up in previous labs, in this lab we'll conclude the 
-semester by taking advantage of inheritance in C++ with the use of pointers.
+Building on our shape hierarchy built up in previous labs, in this lab we'll take advantage of inheritance in C++ with the use of pointers.
 
 ## Task 1: Adding a `name` descriptor to your `Shape` classes
 
@@ -64,13 +63,13 @@ Use the output provided to guide you in how your printout should look. The outpu
 To compile and test your code type this:
 
 ```c++
-g++ -Wall main.cpp shape.cpp rectangle.cpp circle.cpp rightTriangle.cpp -o lab12
-./lab12
+make
+./lab11
 ```
 
 ## Handin
 
-To hand in your project use the *tar czvf* command to turn in all of your `.cpp` and `.h` files and name the file `lab12_handin.tar.gz`. Use the [handin](http://handin.cs.clemson.edu/courses) website to turn in your lab 12.
+To hand in your project use the *tar cvf* command to turn in all of your `.cpp` and `.h` files and name the file `lab11_handin.tar`. Use the [handin](http://handin.cs.clemson.edu/courses) website to turn in your lab 11.
 
 ## Starter kit
 Download using [this](https://github.com/Welchd1/cpsc210-labs/releases/download/12.0/lab12.tar.gz) link.
