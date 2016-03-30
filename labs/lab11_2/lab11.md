@@ -72,4 +72,6 @@ make
 To hand in your project use the *tar cvf* command to turn in all of your `.cpp` and `.h` files and name the file `lab11_handin.tar`. Use the [handin](http://handin.cs.clemson.edu/courses) website to turn in your lab 11.
 
 ## Starter kit
-Download using [this](https://github.com/Welchd1/cpsc210-labs/releases/download/12.0/lab12.tar.gz) link.
+Download using [this](https://github.com/takumib/cpsc210-labs/releases/download/11/lab11.tar) link.
+
+and extract using `tar xvf lab11.tar`
