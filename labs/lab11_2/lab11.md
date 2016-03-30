@@ -10,7 +10,7 @@ In this first task, we will be adding the ability to give the subclasses of `Sha
 class Shape {
 public:
     Shape();
-    Shape(double, double, const std::string);
+    Shape(double, double);
     double getWidth();
     double getHeight();
     virtual std::string getDescription() = 0;
