@@ -15,8 +15,22 @@
 List::List()
 {}
 
+/*
+ * Destructor for the List.
+ * This has already been implemented.
+ */
 List::~List()
-{}
+{
+    if(head != NULL) {
+        Node* cur = head;
+        while(cur != NULL) {
+            std::cout << "removing list item" << std::endl;
+            Node* tmp = cur->getNext();
+            delete cur;
+            cur = tmp;
+        }
+    }
+}
 
 /*
  * Add a new Node to the head of the list.
