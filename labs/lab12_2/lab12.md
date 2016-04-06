@@ -73,14 +73,16 @@ int fib_iterative(int n);
 int fib_recursive(int n);
 ```
 
+**Note**: Try to think about what the base case(s) might be for the functions first and implement your functions around them.
+
 ## Task 2: Implement the `power()` function:
 
 To increase your familiarity with recursive functions, you will now implement an iterative and recursive version of computing the number to a power:
 
 ```c++
-int power_iterative(int base, int pow);
+int pow_iterative(int base, int pow);
 
-int power_recursive(int base, int pow);
+int pow_recursive(int base, int pow);
 ```
 
 ## Testing
@@ -99,4 +101,4 @@ Along with your `.cpp` and `.h` files submit a `results.txt` file with any simil
 To hand in your project use the *tar cvf* command to turn in all of your `.cpp`, `.h` and `results.txt` files and name the file `lab12_handin.tar`. Use the [handin](http://handin.cs.clemson.edu/courses) website to turn in your lab 12.
 
 ## Starter kit
-Download using [this](https://github.com/Welchd1/cpsc210-labs/releases/download/12.0/lab12.tar.gz) link.
+Download using [this](https://github.com/takumib/cpsc210-labs/releases/download/12.0/lab12.tar) link.
