@@ -9,9 +9,10 @@ Throughout this entire semester, all of our computation has used the iterative. 
 ```c++
 int sum(int n) {
   int result = 0;
-  for(int i = 0; i < 10; i++) {
+  for(int i = 0; i < n; i++) {
     result += i;
   }
+  return result;
 }
 ```
 
