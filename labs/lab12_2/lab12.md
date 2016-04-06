@@ -84,8 +84,9 @@ int power_recursive(int base, int pow);
 ```
 
 ## Testing
+To test your program, call the functions that you have implemented in the `main.cpp` file. Print out your results for each function.
 
-To compile and test your code type this:
+To compile and run your code type this:
 
 ```c++
 g++ -Wall main.cpp fib.cpp pow.cpp -o lab12
@@ -93,8 +94,9 @@ g++ -Wall main.cpp fib.cpp pow.cpp -o lab12
 ```
 
 ## Handin
+Along with your `.cpp` and `.h` files submit a `results.txt` file with any similiarities and differences that you notice with the iterative and recursive versions of the Fibonacci and power functions that you have implemented. In addition to this, take note of execution timing and differences in the maximum value you can give for the Fibonacci functions. To observe this try to input increasingly larger values for your `fib_iterative()` and `fib_recursive()` functions until your programs stalls or produces a `Segmentation Fault`.
 
-To hand in your project use the *tar cvf* command to turn in all of your `.cpp` and `.h` files and name the file `lab12_handin.tar`. Use the [handin](http://handin.cs.clemson.edu/courses) website to turn in your lab 12.
+To hand in your project use the *tar cvf* command to turn in all of your `.cpp`, `.h` and `results.txt` files and name the file `lab12_handin.tar`. Use the [handin](http://handin.cs.clemson.edu/courses) website to turn in your lab 12.
 
 ## Starter kit
 Download using [this](https://github.com/Welchd1/cpsc210-labs/releases/download/12.0/lab12.tar.gz) link.
