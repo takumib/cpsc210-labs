@@ -4,7 +4,7 @@ Today we are going to learn about recursion by implementing a sequence of Fibona
 
 ## Iterative Functions
 
-Throughout this entire semester, all of our computation has used the iterative. For example:
+Throughout this entire semester, most of our computation has used iteration. For example:
 
 ```c++
 int sum(int n) {
