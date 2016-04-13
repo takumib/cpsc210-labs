@@ -93,4 +93,4 @@ To hand in your project use the *tar cvf* command to turn in all of your `.cpp`,
 
 ## Starter kit
 
-Download the starter kit [here](https://github.com/takumib/cpsc210-labs/blob/master/labs/lab13/src/lab13.tar).
+Download the starter kit [here](https://github.com/takumib/cpsc210-labs/releases/download/13.0/lab13.tar).
